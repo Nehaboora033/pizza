@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Title = ({ className }) => {
+const Title = ({ className,LeftSvg:Left,RightSvg:Right } ) => {
   return (
-    <div className={`${className} `}>
-      <Left />
-      <Right />
+    <div className={`${className} flex items-center`}>
+     <Left/>
+     <Right/>
     </div>
   )
 }

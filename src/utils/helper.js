@@ -1,3 +1,4 @@
+import { Facebook, Instagram, Linkedin } from "./icon"
 
 export const NavLinks = [
     {
@@ -31,3 +32,18 @@ export const NavLinks = [
 //     galleryImg6,
 //     galleryImg7
 // ]
+
+export const Social_Links = [
+    {
+        icon: <Facebook />,
+        link: '',
+    },
+    {
+        icon: <Instagram />,
+        link: '',
+    },
+    {
+        icon: <Linkedin />,
+        link: '',
+    },
+]
