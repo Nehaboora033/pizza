@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+    --color-prime: linear-gradient(85.95deg, #EC6112 1.54%, #FF902E 98.46%);
+    --text-decoration-prime: linear-gradient(85.95deg, #EC6112 1.54%, #FF902E 98.46%);
+}
+
+.bg-prime {
+    background: var(--color-prime);
+}
+
+.text-prime {
+    background: var(--color-prime);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+.hover-text-prime:hover {
+    background: var(--color-prime);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+.nav-active {
+    position: relative;
+    background: linear-gradient(85.95deg, #EC6112 1.54%, #FF902E 98.46%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom:2px;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(85.95deg, #EC6112 1.54%, #FF902E 98.46%);
+}
+
+@layer components {
+    .my-class{
+        @apply left-0 
+    }
+}
