@@ -84,3 +84,26 @@ export const Fooddelivery_Data=[
         info:'Eco-Friendly Packaging'
     },
 ]
+
+export const About_Data=[
+    {
+   
+        info:"At PizzaNest, we believe that pizza is more than just food — it’s an emotion, a celebration, and comfort all rolled into one delicious slice. Founded with a passion for real ingredients and big flavors, we set out to bring handcrafted, oven-fresh pizzas to every corner of India.",
+    },
+    {
+        info:"Whether you're craving spicy paneer, a creamy cheese burst, or a fully loaded custom pizza made your way, we've got you covered. Each pizza is baked with love, topped with the freshest veggies, premium cheese, and authentic sauces — all delivered hot and fast, right to your doorstep.",
+    },
+
+]
+
+export const About_card=[
+    {
+        info:'Professional Chefs',
+    },
+    {
+        info:"Best Quality Food",
+    },
+    {
+        info:'Online Support ',
+    },
+]

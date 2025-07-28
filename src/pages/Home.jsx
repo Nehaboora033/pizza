@@ -9,11 +9,13 @@ import LimitedOffer from '../components/LimitedOffer'
 import HowItsWork from '../components/HowItsWork'
 import Testinomals from '../components/Testinomals'
 import OurGallery from '../components/OurGallery'
+import AboutUs from '../components/AboutUs'
 
 const Home = () => {
   return (
     <>
       <Hero />
+      <AboutUs/>
       <Delicious/>
       <BestSellers/>
       <Menu/>
