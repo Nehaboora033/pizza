@@ -1,5 +1,6 @@
 import { Facebook, Instagram, Linkedin } from "./icon"
 
+
 export const NavLinks = [
     {
         name: 'Home',
@@ -23,27 +24,30 @@ export const NavLinks = [
     },
 ]
 
-// export const Gallery_Data = [
-//     galleryImg1,
-//     galleryImg2,
-//     galleryImg3,
-//     galleryImg4,
-//     galleryImg5,
-//     galleryImg6,
-//     galleryImg7
-// ]
+export const SocialLinks = [
+    {
+        icon: Facebook,
+        link: 'https://www.facebook.com/',
+    },
+    {
+        icon: Instagram,
+        link: 'https://www.instagram.com/',
+    },
+    {
+        icon: Linkedin,
+        link: 'https://in.linkedin.com/',
+    },
+]
 
-export const Social_Links = [
+export const Footer_Links = [
     {
-        icon: <Facebook />,
-        link: '',
+        title: 'Quick Links',
+        link: ['Home','About Us','Menu','Gallery','Testimonial','Contact'],
+
     },
     {
-        icon: <Instagram />,
-        link: '',
-    },
-    {
-        icon: <Linkedin />,
-        link: '',
+        title: 'Support',
+        link:['Terms & Conditions','Privacy Policy'],
+
     },
 ]
