@@ -69,3 +69,18 @@ export const GALLERY_DATA = [
     galleryImg6,
     galleryImg7,
 ]
+
+export const Fooddelivery_Data=[
+    {
+        info:'30-Minute Delivery Promise',
+    },
+      {
+        info:'Hygienic, Contactless Delivery',
+    },
+    {
+        info:'Real-time Order Tracking',
+    },
+    {
+        info:'Eco-Friendly Packaging'
+    },
+]

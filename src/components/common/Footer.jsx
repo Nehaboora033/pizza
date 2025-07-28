@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import Description from './Description'
 
 const Footer = () => {
+
   return (
     <div className='1146px mx-auto px-3 pt-[80px] pb-4'>
       <div className='flex '>
