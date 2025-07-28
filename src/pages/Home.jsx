@@ -8,6 +8,7 @@ import Menu from '../components/Menu'
 import LimitedOffer from '../components/LimitedOffer'
 import HowItsWork from '../components/HowItsWork'
 import Testinomals from '../components/Testinomals'
+import OurGallery from '../components/OurGallery'
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
       <HowItsWork/>
       <Testinomals/>
        <Gallery />
+       {/* <OurGallery/> */}
     </>
   )
 }

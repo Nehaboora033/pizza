@@ -40,9 +40,12 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <div className='text-[#575757] font-normal text-[16px] text-center border-t-[3px] mt-8 border-[#ECECEC] pt-[19px]'>
+        Copyright Pizza Nest © 2025, All rights reserved 
+      </div>
 
     </div>
-  )
+  ) 
 }
 
 export default Footer
