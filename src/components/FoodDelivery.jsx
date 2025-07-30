@@ -35,7 +35,7 @@ const FoodDelivery = () => {
         </div>
       </div>
     </div>
-     <img src={slice} alt="img" className=' absolute bottom-0 left-0 rotate-180' />
+     {/* <img src={slice} alt="img" className=' absolute bottom-0 left-0 rotate-180' /> */}
     </>
   )
 }

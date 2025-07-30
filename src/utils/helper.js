@@ -1,4 +1,4 @@
-import { Chef, Facebook, Instagram, Linkedin, Quality, support } from "./icon"
+import { Chef, Facebook, Instagram, Linkedin, Order, Pizza, Quality, support, Track } from "./icon"
 import galleryImg1 from "../assets/webp/galleryimg1.webp";
 import galleryImg2 from "../assets/webp/galleryimg2.webp";
 import galleryImg3 from "../assets/webp/galleryimg3.webp";
@@ -70,43 +70,62 @@ export const GALLERY_DATA = [
     galleryImg7,
 ]
 
-export const Fooddelivery_Data=[
+export const Fooddelivery_Data = [
     {
-        info:'30-Minute Delivery Promise',
-    },
-      {
-        info:'Hygienic, Contactless Delivery',
+        info: '30-Minute Delivery Promise',
     },
     {
-        info:'Real-time Order Tracking',
+        info: 'Hygienic, Contactless Delivery',
     },
     {
-        info:'Eco-Friendly Packaging'
+        info: 'Real-time Order Tracking',
+    },
+    {
+        info: 'Eco-Friendly Packaging'
     },
 ]
 
-export const About_Data=[
+export const About_Data = [
     {
-   
-        info:"At PizzaNest, we believe that pizza is more than just food — it’s an emotion, a celebration, and comfort all rolled into one delicious slice. Founded with a passion for real ingredients and big flavors, we set out to bring handcrafted, oven-fresh pizzas to every corner of India.",
+
+        info: "At PizzaNest, we believe that pizza is more than just food — it’s an emotion, a celebration, and comfort all rolled into one delicious slice. Founded with a passion for real ingredients and big flavors, we set out to bring handcrafted, oven-fresh pizzas to every corner of India.",
     },
     {
-        info:"Whether you're craving spicy paneer, a creamy cheese burst, or a fully loaded custom pizza made your way, we've got you covered. Each pizza is baked with love, topped with the freshest veggies, premium cheese, and authentic sauces — all delivered hot and fast, right to your doorstep.",
+        info: "Whether you're craving spicy paneer, a creamy cheese burst, or a fully loaded custom pizza made your way, we've got you covered. Each pizza is baked with love, topped with the freshest veggies, premium cheese, and authentic sauces — all delivered hot and fast, right to your doorstep.",
     },
 
 ]
 
-export const About_card=[
+export const About_card = [
     {
-        info:'Professional Chefs',
-        svg:Chef,
+        info: 'Professional Chefs',
+        svg: Chef,
     },
     {
-        info:"Best Quality Food",
-        svg:Quality,
+        info: "Best Quality Food",
+        svg: Quality,
     },
     {
-        info:'Online Support ',
-        svg:support,
+        info: 'Online Support ',
+        svg: support,
+    },
+]
+
+export const Steps = [
+    {
+        svg: Pizza,
+        title: "Choose Your Pizza",
+        description: 'Browse our mouthwatering menu and pick your favorite from a wide range of cheesy, spicy, and desi-delicious pizzas.',
+    },
+    {
+        svg: Order,
+        title: "Place Your Order",
+        description: 'Confirm your cart, choose delivery or pickup, and pay securely — all in under a minute.',
+    },
+    {
+        svg: Track,
+        title: 'Track & Enjoy',
+        description: 'Watch your pizza arrive in real-time, fresh and hot at your door. Unbox happiness and dig in!',
+
     },
 ]

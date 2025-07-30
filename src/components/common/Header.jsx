@@ -5,7 +5,7 @@ import Button from './Button'
 
 const Header = () => {
   return (
-    <div className='max-w-[1140px] mx-auto p-3'>
+    <div className='max-w-[1140px] mx-auto p-3 pb-[22px]'>
       <div className='flex items-center  justify-between'>
         <Link to={'/'} className='font-medium text-[34px] leading-[100%] text-prime'>
           Pizza Nest

@@ -1,5 +1,5 @@
 import React from 'react'
-import backgroundImage from '../assets/webp/herobgwhite.webp'
+import backgroundImage from '../assets/webp/bestsellerbg.webp'
 import Title from './common/Title'
 import { Line } from '../utils/icon'
 import img from '../assets/webp/chef.webp'
@@ -9,7 +9,7 @@ import Description from './common/Description'
 
 const AboutUs = () => {
     return (
-        <div className='bg-no-repeat bg-center bg-cover pt-[100px] pb-[50px]' style={{ backgroundImage: `url(${backgroundImage})`}}>
+        <div className='bg-no-repeat bg-center bg-cover pt-[100px] pb-[50px]' style={{ backgroundImage: `url(${backgroundImage})` }}>
             <div className='max-w-[1164px] px-3 mx-auto ' >
                 <div className='flex'>
                     <div className='w-1/2'>

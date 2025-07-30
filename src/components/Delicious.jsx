@@ -25,7 +25,7 @@ const Delicious = () => {
         </div>
       </div>
     </div>
-     <img src={slice} alt="slice" className='absolute right-0 top-[50%]' />
+     {/* <img src={slice} alt="slice" className='absolute right-0 top-[50%]' /> */}
     </>
   )
 }
