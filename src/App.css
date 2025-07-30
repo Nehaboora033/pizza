@@ -10,10 +10,13 @@ body {
 @theme {
     --color-prime: linear-gradient(85.95deg, #EC6112 1.54%, #FF902E 98.46%);
     --text-decoration-prime: linear-gradient(85.95deg, #EC6112 1.54%, #FF902E 98.46%);
+    --shadow-orange: 0px 1px 7px 0px #F67A211F;
 
-    
-   
+
+
+
 }
+
 .bg-prime {
     background: var(--color-prime);
 }

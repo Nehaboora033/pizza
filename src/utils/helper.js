@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin } from "./icon"
+import { Chef, Facebook, Instagram, Linkedin, Quality, support } from "./icon"
 import galleryImg1 from "../assets/webp/galleryimg1.webp";
 import galleryImg2 from "../assets/webp/galleryimg2.webp";
 import galleryImg3 from "../assets/webp/galleryimg3.webp";
@@ -99,11 +99,14 @@ export const About_Data=[
 export const About_card=[
     {
         info:'Professional Chefs',
+        svg:Chef,
     },
     {
         info:"Best Quality Food",
+        svg:Quality,
     },
     {
         info:'Online Support ',
+        svg:support,
     },
 ]

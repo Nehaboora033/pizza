@@ -93,7 +93,7 @@ export const Quality = () => (
         <path d="M18.6633 24.2566C17.9945 24.7566 17.2508 25.1816 16.507 25.4816C15.907 25.7316 14.5133 26.1128 14.2258 26.1128C14.1383 26.1128 14.082 26.1378 14.0945 26.1753C14.1695 26.4003 16.8133 30.9191 16.857 30.9003C16.8945 30.8941 17.1695 30.1316 17.4758 29.2003C17.782 28.2753 18.0445 27.5066 18.057 27.5003C18.0633 27.4878 18.8633 27.6378 19.832 27.8316C20.8008 28.0253 21.607 28.1691 21.6258 28.1503C21.657 28.1253 19.3258 24.0253 19.2195 23.9128C19.1945 23.8941 18.9445 24.0441 18.6633 24.2566Z" fill="url(#paint6_linear_256_325)" />
         <defs>
             <linearGradient id="paint0_linear_256_325" x1="9.71875" y1="2.00084" x2="16.1459" y2="2.47875" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#EC6112" />
+                <stop stopColor="#EC6112" />
                 <stop offset="1" stopColor="#FF902E" />
             </linearGradient>
             <linearGradient id="paint1_linear_256_325" x1="0.832031" y1="4.48568" x2="7.21882" y2="4.95909" gradientUnits="userSpaceOnUse">
@@ -113,7 +113,7 @@ export const Quality = () => (
                 <stop offset="1" stopColor="#FF902E" />
             </linearGradient>
             <linearGradient id="paint5_linear_256_325" x1="4.04395" y1="25.4935" x2="11.8102" y2="26.0807" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#EC6112" />
+                <stop stopColor="#EC6112" />
                 <stop offset="1" stopColor="#FF902E" />
             </linearGradient>
             <linearGradient id="paint6_linear_256_325" x1="14.0928" y1="25.5354" x2="21.8662" y2="26.1284" gradientUnits="userSpaceOnUse">
