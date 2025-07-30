@@ -6,6 +6,14 @@ import galleryImg4 from "../assets/webp/galleryimg4.webp";
 import galleryImg5 from "../assets/webp/galleryimg5.webp";
 import galleryImg6 from "../assets/webp/galleryimg6.webp";
 import galleryImg7 from "../assets/webp/galleryimg7.webp";
+import sellerImg1 from '../assets/webp/bestsellerimg1.webp'
+import sellerImg2 from '../assets/webp/bestsellerimg2.webp'
+import sellerImg3 from '../assets/webp/bestsellerimg3.webp'
+import sellerImg4 from '../assets/webp/bestsellerimg4.webp'
+import menuImg1 from '../assets/webp/menuimg1.webp'
+import menuImg2 from '../assets/webp/menuimg2.webp'
+import menuImg3 from '../assets/webp/menuimg3.webp'
+
 
 
 export const NavLinks = [
@@ -127,5 +135,54 @@ export const Steps = [
         title: 'Track & Enjoy',
         description: 'Watch your pizza arrive in real-time, fresh and hot at your door. Unbox happiness and dig in!',
 
+    },
+]
+
+export const Seller_Data = [
+    {
+        pizza: sellerImg1,
+        price: '₹279',
+        title: 'Tandoori Paneer ',
+        description: 'Tandoori-marinated paneer, onion, green & red capsicum, mozzarella, Indian herbs',
+
+    },
+    {
+        pizza: sellerImg2,
+        price: '₹299',
+        title: 'Cheese Overload',
+        description: 'Mozzarella, Cheddar, Processed Cheese, Tomato Sauce,  buttery golden crust',
+    },
+    {
+        pizza: sellerImg3,
+        price: '₹239',
+        title: 'Veggie Fiesta',
+        description: 'Bell peppers, onion, mushrooms, zucchini or brinjal, mozzarella cheese',
+    },
+    {
+        pizza: sellerImg4,
+        price: '₹249',
+        title: 'Masala Paneer',
+        description: 'Masala-marinated paneer, sautéed onions, green & red capsicum, mozzarella cheese',
+    },
+]
+
+export const Menu_Data = [
+    {
+        img:menuImg1,
+        price: '₹229 / ₹359 / ₹499',
+        title: 'Farmhouse Magic',
+        description: 'Onion, capsicum, tomato, grilled mushroom, mozzarella cheese'
+    },
+    {
+        img:menuImg2,
+        price: '₹279 / ₹399 / ₹519',
+        title: 'Masala Paneer',
+        description: 'Masala-marinated paneer, sautéed onions, capsicum, mozzarella cheese',
+    },
+    {
+        img:menuImg3,
+        price: '₹379',
+        title: 'Solo Meal Combo',
+        description: '1 Regular Pizza + Garlic Bread + 1 Soft Drink',
     },
 ]
