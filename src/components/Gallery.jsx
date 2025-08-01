@@ -14,6 +14,7 @@ import Button from './common/Button'
 const Gallery = () => {
     return (
         <div className='max-w-[1164px] px-3 mx-auto py-[100px] '>
+                  {/* ✅ Added title of the secction */}
             <Title >
                 <LeftLine />
                 Our Gallery

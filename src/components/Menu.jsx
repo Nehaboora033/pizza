@@ -10,12 +10,14 @@ import Button from './common/Button'
 const Menu = () => {
   return (
     <div className='max-w-[1164px] px-3 mx-auto py-[100px]'>
+      {/* ✅ Added title to the section */}
       <Title>
         <LeftLine />
         Our Menu
         <RightLine />
       </Title>
       <SubHeading className={'text-center max-w-[569px] w-full mx-auto'} text={'Explore Flavours, Pick Your Cravings'} />
+      {/* ✅ Added card data */}
       <div className='flex gap-6 mt-[40px]'>
         {Menu_Data.map((item, index) => (
           <div className='flex flex-col items-center relative pb-[163px]' key={index}>

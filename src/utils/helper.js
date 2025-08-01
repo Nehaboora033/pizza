@@ -186,3 +186,23 @@ export const Menu_Data = [
         description: '1 Regular Pizza + Garlic Bread + 1 Soft Drink',
     },
 ]
+
+export const Testimonial_Data=[
+    {
+        description:'The Masala Paneer Pizza was bursting with flavor! The paneer was perfectly marinated in Indian spices, and the balance of onions, capsicum, and cheese was spot on. It tasted like my favorite desi snack—just in pizza form! Super satisfying and definitely ordering again.',
+        name:'Aarav Mehta',
+        profession:'Software Developer',
+
+
+    },
+    {
+        description:'The Masala Paneer Pizza was bursting with flavor! The paneer was perfectly marinated in Indian spices, and the balance of onions, capsicum, and cheese was spot on. It tasted like my favorite desi snack—just in pizza form! Super satisfying and definitely ordering again.',
+        name:'Ritesh Malik',
+        profession:'Software Engineer',
+    },
+    {
+        description:'The Masala Paneer Pizza was bursting with flavor! The paneer was perfectly marinated in Indian spices, and the balance of onions, capsicum, and cheese was spot on. It tasted like my favorite desi snack—just in pizza form! Super satisfying and definitely ordering again.',
+        name:'Pooja Rajput',
+        profession:'UI Designer',
+    },
+]

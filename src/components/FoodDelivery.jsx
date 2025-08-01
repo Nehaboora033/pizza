@@ -16,6 +16,7 @@ const FoodDelivery = () => {
       <div className='max-w-[1164px] px-3 mx-auto py-[100px]'>
         <div className='flex'>
           <div className='w-1/2'>
+                {/* ✅ Added title to the section */}
             <Title className={'!justify-start'}>
               Food Delivery
               <RightLine />
@@ -35,9 +36,10 @@ const FoodDelivery = () => {
         </div>
       </div>
     </div>
+          {/* ✅ Added tomato slice */}
      {/* <img src={slice} alt="img" className=' absolute bottom-0 left-0 rotate-180' /> */}
     </>
   )
-}
+} 
 
 export default FoodDelivery

@@ -9,6 +9,7 @@ import Button from './common/Button'
 const HowItsWork = () => {
   return (
     <div className='max-w-[1164px] mx-auto px-3 py-[100px]'>
+            {/* ✅ Added title of secction */}
       <Title className={'mb-2'}>
         <LeftLine />
         How It Works
@@ -18,6 +19,7 @@ const HowItsWork = () => {
       <div className='relative '>
         <StepArrow className={'absolute top-[25px] right-[300px] '}/>
         <StepArrow  className={'absolute top-[25px] left-[300px]'}/>
+              {/* ✅ Added cards data */}
         <div className='flex gap-[50px] justify-center'>
           {Steps.map((item, index) => (
             <div key={index} className='max-w-[316px] w-full '>

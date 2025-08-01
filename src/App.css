@@ -10,6 +10,8 @@ body {
 @theme {
     --color-prime: linear-gradient(85.95deg, #EC6112 1.54%, #FF902E 98.46%);
     --shadow-orange: 0px 1px 7px 0px #F67A211F;
+    --shadow-testinomials: 0px 4px 15.4px 0px #0000000F;
+
 }
 
 .bg-prime {
