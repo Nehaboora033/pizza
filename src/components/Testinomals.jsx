@@ -3,7 +3,7 @@ import backgroundImage from '../assets/webp/bestsellerbg.webp'
 import Title from './common/Title'
 import { ArrowLeft, ArrowRight, LeftLine, RightLine } from '../utils/icon'
 import SubHeading from './common/SubHeading'
-import img from '../assets/webp/testinomalsimg.webp'
+import img from '../assets/png/testinomalsprofileimg.png'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import Description from './common/Description'
@@ -27,6 +27,7 @@ const Testinomals = () => {
         <SubHeading className='text-center mb-[60px]' text='What Our Customers Say' />
         <div className='relative'>
           <img src={img} alt='img' />
+      
 
           <div
             className="absolute bottom-[-100px] right-0  mx-auto bg-no-repeat bg-cover bg-center"
