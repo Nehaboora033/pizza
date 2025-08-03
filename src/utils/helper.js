@@ -13,6 +13,10 @@ import sellerImg4 from '../assets/webp/bestsellerimg4.webp'
 import menuImg1 from '../assets/webp/menuimg1.webp'
 import menuImg2 from '../assets/webp/menuimg2.webp'
 import menuImg3 from '../assets/webp/menuimg3.webp'
+import teamimg1 from '../assets/webp/teamimg1.webp'
+import teamimg2 from '../assets/webp/teamimg2.webp'
+import teamimg3 from '../assets/webp/teamimg3.webp'
+import teamimg4 from '../assets/webp/teamimg4.webp'
 
 
 
@@ -39,6 +43,8 @@ export const NavLinks = [
     },
 ]
 
+
+
 export const SocialLinks = [
     {
         icon: Facebook,
@@ -57,12 +63,48 @@ export const SocialLinks = [
 export const Footer_Links = [
     {
         title: 'Quick Links',
-        link: ['Home', 'About Us', 'Menu', 'Gallery', 'Testimonial', 'Contact'],
+        link:
+            [
+                {
+                    name: 'Home',
+                    path: '/'
+                },
+                {
+                    name: 'About Us',
+                    path: '/about',
+                },
+                {
+                    name: 'Menu',
+                    path: '/menu',
+                },
+                {
+                    name: 'Gallery',
+                    path: '/gallery',
+                },
+                {
+                    name: 'Testinomial',
+                    path: '/testinomial'
+                },
+                {
+                    name: 'Contact',
+                    path: '/contact',
+                },
+            ],
+
 
     },
     {
         title: 'Support',
-        link: ['Terms & Conditions', 'Privacy Policy'],
+        link: [
+            {
+                name: 'Terms & Conditions',
+                path: '/terms',
+            },
+            {
+                name: 'Privacy Policy',
+                path: '/policy',
+            },
+        ],
 
     },
 ]
@@ -168,41 +210,82 @@ export const Seller_Data = [
 
 export const Menu_Data = [
     {
-        img:menuImg1,
+        img: menuImg1,
         price: '₹229 / ₹359 / ₹499',
         title: 'Farmhouse Magic',
         description: 'Onion, capsicum, tomato, grilled mushroom, mozzarella cheese'
     },
     {
-        img:menuImg2,
+        img: menuImg2,
         price: '₹279 / ₹399 / ₹519',
         title: 'Masala Paneer',
         description: 'Masala-marinated paneer, sautéed onions, capsicum, mozzarella cheese',
     },
     {
-        img:menuImg3,
+        img: menuImg3,
         price: '₹379',
         title: 'Solo Meal Combo',
         description: '1 Regular Pizza + Garlic Bread + 1 Soft Drink',
     },
 ]
 
-export const Testimonial_Data=[
+export const Testimonial_Data = [
     {
-        description:'The Masala Paneer Pizza was bursting with flavor! The paneer was perfectly marinated in Indian spices, and the balance of onions, capsicum, and cheese was spot on. It tasted like my favorite desi snack—just in pizza form! Super satisfying and definitely ordering again.',
-        name:'Aarav Mehta',
-        profession:'Software Developer',
+        description: 'The Masala Paneer Pizza was bursting with flavor! The paneer was perfectly marinated in Indian spices, and the balance of onions, capsicum, and cheese was spot on. It tasted like my favorite desi snack—just in pizza form! Super satisfying and definitely ordering again.',
+        name: 'Aarav Mehta',
+        profession: 'Software Developer',
 
 
     },
     {
-        description:'The Masala Paneer Pizza was bursting with flavor! The paneer was perfectly marinated in Indian spices, and the balance of onions, capsicum, and cheese was spot on. It tasted like my favorite desi snack—just in pizza form! Super satisfying and definitely ordering again.',
-        name:'Ritesh Malik',
-        profession:'Software Engineer',
+        description: 'The Masala Paneer Pizza was bursting with flavor! The paneer was perfectly marinated in Indian spices, and the balance of onions, capsicum, and cheese was spot on. It tasted like my favorite desi snack—just in pizza form! Super satisfying and definitely ordering again.',
+        name: 'Ritesh Malik',
+        profession: 'Software Engineer',
     },
     {
-        description:'The Masala Paneer Pizza was bursting with flavor! The paneer was perfectly marinated in Indian spices, and the balance of onions, capsicum, and cheese was spot on. It tasted like my favorite desi snack—just in pizza form! Super satisfying and definitely ordering again.',
-        name:'Pooja Rajput',
-        profession:'UI Designer',
+        description: 'The Masala Paneer Pizza was bursting with flavor! The paneer was perfectly marinated in Indian spices, and the balance of onions, capsicum, and cheese was spot on. It tasted like my favorite desi snack—just in pizza form! Super satisfying and definitely ordering again.',
+        name: 'Pooja Rajput',
+        profession: 'UI Designer',
+    },
+]
+
+export const Team_Data = [
+    {
+        img: teamimg1,
+        name: 'Ankit Bansal ',
+        role: 'Founder',
+    },
+    {
+        img: teamimg2,
+        name: 'Raj Malhotra ',
+        role: 'Head Chef',
+    },
+    {
+        img: teamimg3,
+        name: 'Neha Sharma',
+        role: 'Customer Support Lead',
+    },
+    {
+        img: teamimg4,
+        name: 'Amit Rathi',
+        role: 'Delivery Ops Manager',
+    },
+]
+
+export const Why_choose_Data = [
+    {
+        svg: Chef,
+        title: 'Professional Chefs',
+        description: 'Our dishes are crafted by experienced chefs who bring authentic flavors and expert techniques to every bite.',
+    },
+    {
+        svg: Quality,
+        title: 'Best Quality Food',
+        description: 'We use only the freshest ingredients to ensure every meal is delicious, safe, and satisfying.',
+    },
+    {
+        svg: support,
+        title: 'Online Support',
+        description: 'Got a question or issue? Our friendly support team is available online to help you anytime.',
     },
 ]

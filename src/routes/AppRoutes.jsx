@@ -7,6 +7,11 @@ import Offers from '../pages/Offers'
 import AboutUS from '../pages/AboutUS'
 import PizzaDetail from '../components/PizzaDetail'
 import App from '../App'
+import Gallery from '../components/Gallery'
+import Testinomals from '../components/Testinomals'
+import ContactUs from '../pages/ContactUs'
+import Terms from '../components/Terms'
+import Policy from '../components/Policy'
 
 
 const AppRoutes = createBrowserRouter([
@@ -39,6 +44,26 @@ const AppRoutes = createBrowserRouter([
       {
         path: 'about',
         element: <AboutUS />
+      },
+      {
+        path:'gallery',
+        element:<Gallery/>
+      },
+      {
+        path:'testinomial',
+        element:<Testinomals/>
+      },
+      {
+        path:'contact',
+        element:<ContactUs/>
+      },
+      {
+        path:'terms',
+        element:<Terms/>
+      },
+      {
+        path:'policy',
+        element:<Policy/>
       },
     ]
   }

@@ -27,13 +27,11 @@ const Testinomals = () => {
         <SubHeading className='text-center mb-[60px]' text='What Our Customers Say' />
         <div className='relative'>
           <img src={img} alt='img' />
-      
+
 
           <div
             className="absolute bottom-[-100px] right-0  mx-auto bg-no-repeat bg-cover bg-center"
-            style={{
-              backgroundImage: `url(${image})`
-            }}
+
           >
             <Swiper
               modules={[Navigation]}
@@ -43,12 +41,15 @@ const Testinomals = () => {
                 prevEl: '.prevBtn',
               }}
               className="shadow-testinomials bg-white rounded-xl max-w-[680px] min-h-[298px]"
+              style={{
+                backgroundImage: `url(${image})`
+              }}
             >
               {Testimonial_Data.map((item, index) => (
                 <SwiperSlide className="p-6" key={index}>
-                    <Description className={ 'text-[#545454] mb-4'} text={item.description} />
-                    <SubHeading className="!text-[24px]" text={item.name} />
-                    <Description className={ 'text-[#545454]'} text={item.profession} />
+                  <Description className={'text-[#545454] mb-4'} text={item.description} />
+                  <SubHeading className="!text-[24px]" text={item.name} />
+                  <Description className={'text-[#545454]'} text={item.profession} />
                 </SwiperSlide>
               ))}
             </Swiper>
