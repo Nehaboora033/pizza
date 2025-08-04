@@ -53,6 +53,10 @@ body {
     background: linear-gradient(85.95deg, #EC6112 1.54%, #FF902E 98.46%);
 }
 
+.after-img::after {
+    background-image: url(assets/webp/greysheet.webp);
+}
+
 @layer components {
     .my-class {
         @apply left-0
