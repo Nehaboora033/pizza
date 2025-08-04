@@ -13,6 +13,8 @@ body {
     --shadow-testinomials: 0px 4px 15.4px 0px #0000000F;
     --shadow-teamcard: 0px 1px 16px 0px #00000014;
     --shadow-choose: 0px 2px 16.8px 0px #00000014;
+    --shadow-card: 0px 4px 14.9px 0px #0000000F;
+
 }
 
 .bg-prime {

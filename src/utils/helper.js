@@ -1,4 +1,4 @@
-import { Chef, Facebook, Instagram, Linkedin, Order, Pizza, Quality, support, Track } from "./icon"
+import { Chef, Email, Facebook, Instagram, Linkedin, Order, Pizza, Quality, support, Track, Visit } from "./icon"
 import galleryImg1 from "../assets/webp/galleryimg1.webp";
 import galleryImg2 from "../assets/webp/galleryimg2.webp";
 import galleryImg3 from "../assets/webp/galleryimg3.webp";
@@ -287,5 +287,24 @@ export const Why_choose_Data = [
         svg: support,
         title: 'Online Support',
         description: 'Got a question or issue? Our friendly support team is available online to help you anytime.',
+    },
+]
+
+export const Contactcard = [
+    {
+        svg: Email,
+        title: 'Call Us 24/7',
+        data: 'Call - +91 98765 43210',
+
+    },
+    {
+        svg: Visit,
+        title: 'Visit Us',
+        data: '5th Floor, Sector 44, Gurugram, Haryana – 122003',
+    },
+    {
+        svg: Email,
+        title: 'Email Us',
+        data: 'Pizzanest235@gmail.com',
     },
 ]

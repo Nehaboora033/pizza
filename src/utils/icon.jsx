@@ -218,20 +218,46 @@ export const StepArrow = ({ className }) => (
 
 )
 
-export const ArrowRight = ({className}) => (
+export const ArrowRight = ({ className }) => (
     <svg
-    className={className}
-    width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        className={className}
+        width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M15 7L1 7M15 7L9 1M15 7L9 13" stroke="#FEFEFE" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
 
 )
 
-export const ArrowLeft = ({className}) => (
+export const ArrowLeft = ({ className }) => (
     <svg
-    className={className}
-    width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        className={className}
+        width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1 7L15 7M1 7L7 1M1 7L7 13" stroke="#FEFEFE" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+
+)
+
+export const Email = () => (
+    <svg width="34" height="28" viewBox="0 0 34 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M30.334 0.666626H3.66732C1.83398 0.666626 0.350651 2.16663 0.350651 3.99996L0.333984 24C0.333984 25.8333 1.83398 27.3333 3.66732 27.3333H30.334C32.1673 27.3333 33.6673 25.8333 33.6673 24V3.99996C33.6673 2.16663 32.1673 0.666626 30.334 0.666626ZM30.334 7.33329L17.0007 15.6666L3.66732 7.33329V3.99996L17.0007 12.3333L30.334 3.99996V7.33329Z" fill="url(#paint0_linear_666_1778)" />
+        <defs>
+            <linearGradient id="paint0_linear_666_1778" x1="0.333985" y1="21.1363" x2="34.6613" y2="18.0995" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#EC6112" />
+                <stop offset="1" stopColor="#FF902E" />
+            </linearGradient>
+        </defs>
+    </svg>
+
+)
+
+export const Visit = () => (
+    <svg width="24" height="34" viewBox="0 0 24 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11.9987 16.1661C10.8936 16.1661 9.83382 15.7271 9.05242 14.9457C8.27102 14.1643 7.83203 13.1045 7.83203 11.9994C7.83203 10.8944 8.27102 9.83455 9.05242 9.05315C9.83382 8.27175 10.8936 7.83276 11.9987 7.83276C13.1038 7.83276 14.1636 8.27175 14.945 9.05315C15.7264 9.83455 16.1654 10.8944 16.1654 11.9994C16.1654 12.5466 16.0576 13.0884 15.8482 13.5939C15.6388 14.0995 15.3319 14.5588 14.945 14.9457C14.5581 15.3326 14.0987 15.6395 13.5932 15.8489C13.0877 16.0583 12.5459 16.1661 11.9987 16.1661ZM11.9987 0.332764C8.90451 0.332764 5.93704 1.56193 3.74912 3.74985C1.56119 5.93778 0.332031 8.90524 0.332031 11.9994C0.332031 20.7494 11.9987 33.6661 11.9987 33.6661C11.9987 33.6661 23.6654 20.7494 23.6654 11.9994C23.6654 8.90524 22.4362 5.93778 20.2483 3.74985C18.0604 1.56193 15.0929 0.332764 11.9987 0.332764Z" fill="url(#paint0_linear_666_1787)" />
+        <defs>
+            <linearGradient id="paint0_linear_666_1787" x1="0.332031" y1="25.9199" x2="24.4899" y2="24.7231" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#EC6112" />
+                <stop offset="1" stopColor="#FF902E" />
+            </linearGradient>
+        </defs>
     </svg>
 
 )
