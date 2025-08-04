@@ -9,20 +9,22 @@ import LimitedOffer from '../components/LimitedOffer'
 import HowItsWork from '../components/HowItsWork'
 import Testinomals from '../components/Testinomals'
 import AboutUs from '../components/AboutUs'
+import Craving from '../components/common/Craving'
 
 const Home = () => {
   return (
     <>
       <Hero />
-      <AboutUs/>
-      <Delicious/>
-      <BestSellers/>
-      <Menu/>
-      <LimitedOffer/>
+      <AboutUs />
+      <Delicious />
+      <BestSellers />
+      <Menu />
+      <LimitedOffer />
       <FoodDelivery />
-      <HowItsWork/>
-      <Testinomals/>
-       <Gallery />
+      <HowItsWork />
+      <Testinomals />
+      <Gallery />
+      <Craving />
     </>
   )
 }
