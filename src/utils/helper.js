@@ -295,16 +295,19 @@ export const Contactcard = [
         svg: Email,
         title: 'Call Us 24/7',
         data: 'Call - +91 98765 43210',
+        link:'tel:+919876543210',
 
     },
     {
         svg: Visit,
         title: 'Visit Us',
         data: '5th Floor, Sector 44, Gurugram, Haryana – 122003',
+        link:'',
     },
     {
         svg: Email,
         title: 'Email Us',
-        data: 'Pizzanest235@gmail.com',
+        data: 'mailto:Pizzanest235@gmail.com',
+        link:'mailto:Pizzanest235@gmail.com',
     },
 ]

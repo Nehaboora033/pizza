@@ -2,6 +2,7 @@ import React from 'react'
 import { Contactcard } from '../utils/helper'
 import SubHeading from './common/SubHeading'
 import Description from './common/Description'
+import { Link } from 'react-router-dom'
 
 const ContactCards = () => {
   return (
@@ -13,7 +14,9 @@ const ContactCards = () => {
               <item.svg />
             </div>
             <SubHeading className={'mt-5 !text-[24px] text-center'} text={item.title} />
-            <Description className={'text-[#717171] mt-3 max-w-[252px] w-full text-center'} text={item.data} />
+            <Link to={item.link}>
+              <Description className={'text-[#717171] mt-3 max-w-[252px] w-full text-center'} text={item.data} />
+            </Link>
           </div>
         ))}
       </div>
