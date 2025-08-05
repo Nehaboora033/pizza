@@ -17,6 +17,10 @@ import teamimg1 from '../assets/webp/teamimg1.webp'
 import teamimg2 from '../assets/webp/teamimg2.webp'
 import teamimg3 from '../assets/webp/teamimg3.webp'
 import teamimg4 from '../assets/webp/teamimg4.webp'
+import farmhouse from '../assets/webp/farmhouse.webp'
+import peppyPanner from '../assets/webp/peppypaneerpizza.webp'
+import cheessecorn from '../assets/webp/cheesecornpizza.webp'
+import margherita from '../assets/webp/margheritapizza.webp'
 
 
 
@@ -295,19 +299,72 @@ export const Contactcard = [
         svg: Email,
         title: 'Call Us 24/7',
         data: 'Call - +91 98765 43210',
-        link:'tel:+919876543210',
+        link: 'tel:+919876543210',
 
     },
     {
         svg: Visit,
         title: 'Visit Us',
         data: '5th Floor, Sector 44, Gurugram, Haryana – 122003',
-        link:'',
+        link: '',
     },
     {
         svg: Email,
         title: 'Email Us',
         data: 'mailto:Pizzanest235@gmail.com',
-        link:'mailto:Pizzanest235@gmail.com',
+        link: 'mailto:Pizzanest235@gmail.com',
     },
+]
+
+export const menupizza = [
+    {
+        img: margherita,
+        title: 'Classic Margherita',
+        description: 'Classic delight with 100% real mozzarella cheese.',
+        price: '₹ 149',
+
+    },
+    {
+        img: peppyPanner,
+        title: 'Peppy Paneer',
+        description: 'Flavorful paneer chunks with crisp capsicum and red paprika.',
+        price: '₹ 299',
+    },
+    {
+        img: farmhouse,
+        title: 'Farmhouse',
+        description: 'Loaded with onion, capsicum, tomato, and mushrooms.',
+        price: '₹ 299',
+    },
+    {
+        img:cheessecorn ,
+        title: 'Cheese Corn',
+        description: '100% real mozzarella with sweet golden corn',
+        price: '₹ 179',
+    },
+    {
+        img:margherita ,
+        title: 'Paneer Makhani',
+        description: 'Desi-style paneer chunks in creamy makhani sauce with onion & capsicum',
+        price: '₹ 269',
+    },
+    {
+        img: peppyPanner,
+        title: 'Deluxe Veggie',
+        description: 'Extra loaded with onion, capsicum, mushroom, corn & paneer',
+        price: '₹ 289',
+    },
+    {
+        img: farmhouse,
+        title: 'Tandoori Onion ',
+        description: 'Tandoori-flavored onions with green capsicum and extra cheese',
+        price: '₹ 299',
+    },
+    {
+        img:peppyPanner ,
+        title: 'Peri Peri Veg',
+        description: 'Spicy peri peri sauce with tomato, onion, jalapeno, and mozzarella',
+        price: '₹ 249',
+    },
+
 ]

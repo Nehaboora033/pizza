@@ -5,7 +5,7 @@ import Title from './common/Title'
 import { RightLine } from '../utils/icon'
 import SubHeading from './common/SubHeading'
 import Description from './common/Description'
-import check from '../assets/svg/check.png'
+import check from '../assets/svg/check.svg'
 import { Fooddelivery_Data } from '../utils/helper'
 import slice from '../assets/webp/tomatoslice.webp'
 
