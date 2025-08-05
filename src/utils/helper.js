@@ -430,3 +430,22 @@ export const Famous_Data = [
         rating: '4.4',
     },
 ]
+
+export const What_Pizza_Data=[
+    {
+        img:margherita,
+        title:'Margherita',
+    },
+    {
+        img:masalaPaneer,
+        title:'Masala Paneer',
+    },
+    {
+        img:farmhouse,
+        title:'Farmhouse Magic',
+    },
+    {
+        img:cheeseloaded,
+        title:'Cheese Overload',
+    },
+]
