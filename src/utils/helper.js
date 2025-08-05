@@ -21,7 +21,10 @@ import farmhouse from '../assets/webp/farmhouse.webp'
 import peppyPanner from '../assets/webp/peppypaneerpizza.webp'
 import cheessecorn from '../assets/webp/cheesecornpizza.webp'
 import margherita from '../assets/webp/margheritapizza.webp'
-
+import cheeseloaded from '../assets/webp/cheeseloadedpizza.webp'
+import veggieFiesta from '../assets/webp/veggiefiestapizza.webp'
+import masalaPaneer from '../assets/webp/masalapaneerpizza.webp'
+import periPeri from '../assets/webp/periperipizza.webp'
 
 
 export const NavLinks = [
@@ -337,13 +340,13 @@ export const menupizza = [
         price: '₹ 299',
     },
     {
-        img:cheessecorn ,
+        img: cheessecorn,
         title: 'Cheese Corn',
         description: '100% real mozzarella with sweet golden corn',
         price: '₹ 179',
     },
     {
-        img:margherita ,
+        img: margherita,
         title: 'Paneer Makhani',
         description: 'Desi-style paneer chunks in creamy makhani sauce with onion & capsicum',
         price: '₹ 269',
@@ -361,10 +364,69 @@ export const menupizza = [
         price: '₹ 299',
     },
     {
-        img:peppyPanner ,
+        img: peppyPanner,
         title: 'Peri Peri Veg',
         description: 'Spicy peri peri sauce with tomato, onion, jalapeno, and mozzarella',
         price: '₹ 249',
     },
 
+]
+
+export const Famous_Data = [
+    {
+        img: margherita,
+        title: 'Classic Margherita',
+        description: 'Pizza Paradise',
+        price: '₹ 249',
+        rating: '4.0',
+    },
+    {
+        img: cheeseloaded,
+        title: 'Cheese Overload',
+        description: 'Desi Dhaba',
+        price: '₹ 299',
+        rating: '4.5',
+    },
+    {
+        img: veggieFiesta,
+        title: 'Veggie Fiesta',
+        description: "La Pino'z Pizza",
+        price: '₹ 269',
+        rating: '4.2',
+    },
+    {
+        img:masalaPaneer,
+        title: 'Masala Paneer',
+        description: 'Pizza Wings',
+        price: '₹ 299',
+        rating: '4.4',
+    },
+    {
+        img: farmhouse,
+        title: 'Farmhouse Magic',
+        description: 'Oven Story',
+        price: '₹ 279',
+        rating: '4.0',
+    },
+    {
+        img:peppyPanner,
+        title: 'Peppy Paneer',
+        description: 'Pizza Wings',
+        price: '₹ 289',
+        rating: '4.5',
+    },
+    {
+        img:periPeri,
+        title: 'Peri Peri Paneer',
+        description: 'Oven Story',
+        price: '₹ 299',
+        rating: '4.2',
+    },
+    {
+        img: cheessecorn,
+        title: 'Cheese n Corn',
+        description: 'Domino’s Pizza',
+        price: '₹ 259',
+        rating: '4.4',
+    },
 ]
