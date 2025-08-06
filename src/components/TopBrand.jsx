@@ -54,10 +54,11 @@ const TopBrand = () => {
               setIsEnd(swiper.isEnd);
             }}
             onSlideChange={handleSlideChange}
+            className='!p-3 '
           >
             {Brands.map((item, index) => (
               <SwiperSlide key={index}>
-                <div className=' rounded-[8px] pt-[12px] shadow-whatpizza'>
+                <div className=' rounded-[8px] pt-[12px] shadow-whatpizza cursor-pointer'>
                   <div className='flex gap-[16px]'>
                     <div className='rounded-[4px] bg-[#F9FAFB] ml-[12px]'>
                       <img src={item.img} alt="img" className='size-[72px]' />
@@ -65,9 +66,9 @@ const TopBrand = () => {
                     <div>
                       <p className='font-bold text-[16px] mb-[4px] '>{item.title} </p>
                       <div className='flex  gap-[8px]'>
-                        <div className='bg-[#15803D] rounded-[2px] py-[4px] px-[6px] flex items-center gap-[2px]  '>
+                        <div className='bg-[#15803D] h-[20px] rounded-[2px] py-[2px] px-[6px] flex items-center gap-[2px]  '>
                           <Star />
-                          <Description className='text-white' text={item.rating} />
+                          <Description className='text-white !text-[12px]' text={item.rating} />
                         </div>
                         <div className='flex items-center gap-[4px]'>
                           <Time />

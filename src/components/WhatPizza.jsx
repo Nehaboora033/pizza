@@ -1,4 +1,4 @@
-import React, { useRef, useState} from 'react';
+import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
@@ -44,6 +44,7 @@ const WhatPizza = () => {
           </div>
         </div>
 
+
         {/* Swiper */}
         <Swiper
           modules={[Navigation]}
@@ -59,17 +60,16 @@ const WhatPizza = () => {
             setIsEnd(swiper.isEnd);
           }}
           onSlideChange={handleSlideChange}
+          className='!py-3'
         >
           {What_Pizza_Data.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className='shadow-whatpizza'>
-                <div className='rounded-xl overflow-hidden'>
-                  <img src={item.img} alt='img' className='w-full' />
+              <div className='shadow-whatpizza rounded-xl overflow-hidden cursor-pointer'>
+                  <img src={item.img} alt='img' className='w-full ' />
                   <Description
                     className='py-[6px] text-center !text-[20px]'
                     text={item.title}
                   />
-                </div>
               </div>
             </SwiperSlide>
           ))}

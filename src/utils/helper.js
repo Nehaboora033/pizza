@@ -29,6 +29,11 @@ import dominos from '../assets/png/dominos.png'
 import mcdonald from '../assets/png/mcdonald.png'
 import burgerking from '../assets/png/burgerking.png'
 import pizzahut from '../assets/png/pizzahut.png'
+import Restaurantimg1 from '../assets/webp/restaurantimg1.webp'
+import Restaurantimg2 from '../assets/webp/restaurantimg2.webp'
+import Restaurantimg3 from '../assets/webp/restaurantimg3.webp'
+import Restaurantimg4 from '../assets/webp/restaurantimg4.webp'
+
 
 
 export const NavLinks = [
@@ -472,7 +477,7 @@ export const What_Pizza_Data = [
 
 export const Brands = [
     {
-        img:dominos,
+        img: dominos,
         title: 'Domino`s Pizza',
         rating: '4.2',
         time: '30 min',
@@ -480,28 +485,28 @@ export const Brands = [
     },
 
     {
-        img:pizzahut,
+        img: pizzahut,
         title: "Pizza's Hut",
         rating: '4.1',
         time: '30 min',
         offer: '₹150 OFF on orders above ₹400',
     },
     {
-        img:burgerking,
+        img: burgerking,
         title: 'Burger King',
         rating: '4.0',
         time: '25 min',
         offer: '40% OFF up to ₹80',
     },
     {
-        img:mcdonald,
+        img: mcdonald,
         title: "McDonald's",
         rating: '4.0',
         time: '20 min',
         offer: '30% OFF on combos',
     },
-     {
-        img:dominos,
+    {
+        img: dominos,
         title: 'Domino`s Pizza',
         rating: '4.2',
         time: '30 min',
@@ -509,24 +514,77 @@ export const Brands = [
     },
 
     {
-        img:pizzahut,
+        img: pizzahut,
         title: "Pizza's Hut",
         rating: '4.1',
         time: '30 min',
         offer: '₹150 OFF on orders above ₹400',
     },
     {
-        img:burgerking,
+        img: burgerking,
         title: 'Burger King',
         rating: '4.0',
         time: '25 min',
         offer: '40% OFF up to ₹80',
     },
     {
-        img:mcdonald,
+        img: mcdonald,
         title: "McDonald's",
         rating: '4.0',
         time: '20 min',
         offer: '30% OFF on combos',
     },
-] 
+]
+
+export const Restaurant = [
+    {
+        img: Restaurantimg1,
+        title: 'Punjabi Tadka',
+        description: 'North Indian, Punjabi',
+        rating: '4.0',
+
+    },
+    {
+        img: Restaurantimg2,
+        title: 'Pizza Paradise',
+        description: 'Pizza, Fast Food',
+        rating: '4.3',
+    },
+    {
+        img: Restaurantimg3,
+        title: 'Desi Dhaba',
+        description: 'North Indian, Street Food',
+        rating: '3.9',
+    },
+    {
+        img: Restaurantimg4,
+        title: 'Sharma Sweets ',
+        description: 'Sweets, North Indian',
+        rating: '4.4',
+    },
+    {
+        img: Restaurantimg1,
+        title: 'Punjabi Tadka',
+        description: 'North Indian, Punjabi',
+        rating: '4.0',
+
+    },
+    {
+        img: Restaurantimg2,
+        title: 'Pizza Paradise',
+        description: 'Pizza, Fast Food',
+        rating: '4.3',
+    },
+    {
+        img: Restaurantimg3,
+        title: 'Desi Dhaba',
+        description: 'North Indian, Street Food',
+        rating: '3.9',
+    },
+    {
+        img: Restaurantimg4,
+        title: 'Sharma Sweets ',
+        description: 'Sweets, North Indian',
+        rating: '4.4',
+    },
+]
