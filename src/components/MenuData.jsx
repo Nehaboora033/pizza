@@ -28,11 +28,11 @@ const MenuData = () => {
         <div>
           <SubHeading className={'mt-[36px] !text-[24px]'} text={'Pizzas'} />
           <div className='flex gap-[14px] mt-5 mb-[40px]'>
-            <Button className={'flex gap-1 items-center !px-[16px] !py-[8px] bg-prime whitespace-nowrap text-[20px]'}>
+            <Button className={'flex gap-1 items-center !px-[16px] !py-[8px] !rounded-[4px] border !text-black border-[#C2C2C2] whitespace-nowrap text-[20px]'}>
               <img src={veg} alt="img" className='size-[20px] ' />
               Veg
             </Button>
-            <Button className={'flex gap-1 items-center !px-[16px] bg-prime !py-[8px] whitespace-nowrap text-[20px] '}>
+            <Button className={'flex gap-1 items-center !px-[16px] !text-black border !rounded-[4px] border-[#C2C2C2]  !py-[8px] whitespace-nowrap text-[20px] '}>
               <img src={nonveg} alt="img" className='size-[20px]' />
               Non Veg
             </Button>
