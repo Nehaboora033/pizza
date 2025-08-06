@@ -25,6 +25,10 @@ import cheeseloaded from '../assets/webp/cheeseloadedpizza.webp'
 import veggieFiesta from '../assets/webp/veggiefiestapizza.webp'
 import masalaPaneer from '../assets/webp/masalapaneerpizza.webp'
 import periPeri from '../assets/webp/periperipizza.webp'
+import dominos from '../assets/png/dominos.png'
+import mcdonald from '../assets/png/mcdonald.png'
+import burgerking from '../assets/png/burgerking.png'
+import pizzahut from '../assets/png/pizzahut.png'
 
 
 export const NavLinks = [
@@ -465,3 +469,64 @@ export const What_Pizza_Data = [
         title: 'Cheese Overload',
     },
 ]
+
+export const Brands = [
+    {
+        img:dominos,
+        title: 'Domino`s Pizza',
+        rating: '4.2',
+        time: '30 min',
+        offer: '50% OFF up to ₹100',
+    },
+
+    {
+        img:pizzahut,
+        title: "Pizza's Hut",
+        rating: '4.1',
+        time: '30 min',
+        offer: '₹150 OFF on orders above ₹400',
+    },
+    {
+        img:burgerking,
+        title: 'Burger King',
+        rating: '4.0',
+        time: '25 min',
+        offer: '40% OFF up to ₹80',
+    },
+    {
+        img:mcdonald,
+        title: "McDonald's",
+        rating: '4.0',
+        time: '20 min',
+        offer: '30% OFF on combos',
+    },
+     {
+        img:dominos,
+        title: 'Domino`s Pizza',
+        rating: '4.2',
+        time: '30 min',
+        offer: '50% OFF up to ₹100',
+    },
+
+    {
+        img:pizzahut,
+        title: "Pizza's Hut",
+        rating: '4.1',
+        time: '30 min',
+        offer: '₹150 OFF on orders above ₹400',
+    },
+    {
+        img:burgerking,
+        title: 'Burger King',
+        rating: '4.0',
+        time: '25 min',
+        offer: '40% OFF up to ₹80',
+    },
+    {
+        img:mcdonald,
+        title: "McDonald's",
+        rating: '4.0',
+        time: '20 min',
+        offer: '30% OFF on combos',
+    },
+] 
