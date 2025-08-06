@@ -15,13 +15,13 @@ const Delicious = () => {
             <Description className={'text-prime !text-[28px]'} text={'Delicious'}/>
             <SubHeading className={'text-white !text-[36px]'} text={'Spicy Paneer'} />
             <Description className={'text-white text-[28px] mb-4'} text={'Limited Time'} />
-            <Button className={'!py-[10px] !px-4'}>Order Now </Button>
+            <Button className={'!py-[10px] !px-4 bg-prime'}>Order Now </Button>
         </div>
         <div className='w-1/2 bg-center bg-no-repeat bg-cover rounded-xl pl-8 py-[63px]' style={{ backgroundImage: `url(${backgroundImage2})` }}>
             <Description className={'text-prime !text-[28px]'} text={'Delicious'}/>
             <SubHeading className={'text-white !text-[36px]'} text={'CHEESE BURST'} />
             <Description className={'text-white text-[28px] mb-4'} text={'Limited Time'} />
-            <Button className={'!py-[10px] !px-4'}>Order Now </Button>
+            <Button className={'!py-[10px] !px-4 bg-prime'}>Order Now </Button>
         </div>
       </div>
     </div>

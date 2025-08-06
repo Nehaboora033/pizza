@@ -12,7 +12,7 @@ const OfferHero = () => {
           <p className='font-medium text-[28px] text-white'>Buy 1 Pizza, Get 1 Free!</p>
           <h1 className='font-extrabold text-[50px] text-white mt-[2px]'>Medium & Large pizzas</h1>
           <p className='font-medium text-[28px] text-white mt-1'>Limited Offer</p>
-          <Button className={'mt-[12px]'}>Order Now</Button>
+          <Button className={'mt-[12px] bg-prime'}>Order Now</Button>
         </div>
         <img src={img} alt="img" className='absolute top-[80px] right-0' />
         <div className='rounded-[6px]  font-extrabold text-white p-[8.48px] text-[19px] text-start absolute top-[50px] right-[39%] w-[153px] h-[88px] box-prime1'>

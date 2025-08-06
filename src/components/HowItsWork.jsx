@@ -29,7 +29,7 @@ const HowItsWork = () => {
               <SubHeading className={'!text-[24px] text-center mt-3'} text={item.title} />
               <Description className={'mt-2 mb-3 text-center'} text={item.description} />
               <div className='flex justify-center items-center'>
-                <Button className={'!py-[10px] !px-4 max-w-[115px] w-full'}>View Menu</Button>
+                <Button className={'!py-[10px] !px-4 max-w-[115px] w-full bg-prime'}>View Menu</Button>
               </div>
             </div>
           ))}

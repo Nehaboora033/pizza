@@ -20,7 +20,7 @@ const Header = () => {
             )
           })}
         </nav>
-        <Button>Contact Us</Button>
+        <Button className='bg-prime'>Contact Us</Button>
       </div>
     </div>
   )

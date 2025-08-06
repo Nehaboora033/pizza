@@ -56,10 +56,10 @@ const Testinomals = () => {
 
             {/* Navigation Buttons */}
             <div className="flex items-center absolute z-1 bottom-6 left-6 mt-6 gap-1">
-              <Button className="prevBtn !rounded-[4px] !px-[15px] !py-3.5 flex items-center justify-center transition">
-                <ArrowLeft />
+              <Button className="prevBtn !rounded-[4px] !px-[15px] bg-[#EEEEEE] !py-3.5 flex items-center justify-center transition">
+                <ArrowLeft/>
               </Button>
-              <Button className="nextBtn !rounded-[4px] flex items-center justify-center !px-[15px] !py-3.5 transition">
+              <Button className="nextBtn bg-prime !rounded-[4px] flex items-center justify-center !px-[15px] !py-3.5 transition">
                 <ArrowRight />
               </Button>
             </div>

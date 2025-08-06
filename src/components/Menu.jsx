@@ -31,7 +31,7 @@ const Menu = () => {
           </div>
         ))}
       </div>
-      <div className='flex justify-center mt-[32px]'><Button>View More</Button></div>
+      <div className='flex justify-center mt-[32px]'><Button className='bg-prime'>View More</Button></div>
     </div>
   )
 }

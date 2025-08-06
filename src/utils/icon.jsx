@@ -231,7 +231,7 @@ export const ArrowLeft = ({ className }) => (
     <svg
         className={className}
         width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1 7L15 7M1 7L7 1M1 7L7 13" stroke="#FEFEFE" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M1 7L15 7M1 7L7 1M1 7L7 13" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
 
 )
@@ -368,22 +368,28 @@ export const Medium = () => (
 
 )
 
-export const Rightcursor = () => (
-    <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+export const Rightcursor = ({ className }) => (
+    <svg
+        className={className}
+        width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1 14L7 7.5L1 1" stroke="#FEFEFE" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
 
 )
 
-export const Leftcursor = () => (
-    <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+export const Leftcursor = ({ className }) => (
+    <svg
+        className={className}
+        width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M7 14L1 7.5L7 1" stroke="#424242" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
 
 )
 
-export const SearchIcon = () => (
-    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+export const SearchIcon = ({ className }) => (
+    <svg
+        className={className}
+        width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M16.4995 16.5005L12.8828 12.8838" stroke="#9CA3AF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
         <path d="M8.16667 14.8333C11.8486 14.8333 14.8333 11.8486 14.8333 8.16667C14.8333 4.48477 11.8486 1.5 8.16667 1.5C4.48477 1.5 1.5 4.48477 1.5 8.16667C1.5 11.8486 4.48477 14.8333 8.16667 14.8333Z" stroke="#9CA3AF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>

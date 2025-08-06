@@ -101,7 +101,7 @@ const ContactForm = () => {
           </div>
 
           <div className='flex justify-center'>
-            <Button className='!px-[81.5px]'>Submit</Button>
+            <Button className='!px-[81.5px] bg-prime'>Submit</Button>
           </div>
         </form>
       </div>

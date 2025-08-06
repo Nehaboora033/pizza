@@ -25,7 +25,7 @@ const BestSellers = () => {
                 <SubHeading className={'text-prime !text-[32px] mb-0.5 text-center'} text={item.price} />
                 <SubHeading className={'mb-0.5 !text-[24px] text-center'} text={item.title} />
                 <Description className={'mb-3 text-center text-[#5C5C5C]'} text={item.description} />
-                <div className='flex items-center justify-center'><Button className={'!py-[10px] !px-4'}>Order Now</Button></div>
+                <div className='flex items-center justify-center'><Button className={'!py-[10px] !px-4 bg-prime'}>Order Now</Button></div>
                 <img src={item.pizza} alt="img" className='absolute top-[-30%] left-[65px]' />
               </div>
             </div>

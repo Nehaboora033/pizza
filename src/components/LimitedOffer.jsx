@@ -15,7 +15,7 @@ const LimitedOffer = () => {
             <div className='text-prime font-semibold text-[28px] mb-4 '>
               Limited Offer
             </div>
-            <Button className={'w-[145px]'}>Order Now</Button>
+            <Button className={'w-[145px] bg-prime'}>Order Now</Button>
           </div>
           <div className='w-[40%] flex'>
             <img src={img} alt="img" />

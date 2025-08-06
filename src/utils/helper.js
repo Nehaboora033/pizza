@@ -395,7 +395,7 @@ export const Famous_Data = [
         rating: '4.2',
     },
     {
-        img:masalaPaneer,
+        img: masalaPaneer,
         title: 'Masala Paneer',
         description: 'Pizza Wings',
         price: '₹ 299',
@@ -409,14 +409,14 @@ export const Famous_Data = [
         rating: '4.0',
     },
     {
-        img:peppyPanner,
+        img: peppyPanner,
         title: 'Peppy Paneer',
         description: 'Pizza Wings',
         price: '₹ 289',
         rating: '4.5',
     },
     {
-        img:periPeri,
+        img: periPeri,
         title: 'Peri Peri Paneer',
         description: 'Oven Story',
         price: '₹ 299',
@@ -431,21 +431,37 @@ export const Famous_Data = [
     },
 ]
 
-export const What_Pizza_Data=[
+export const What_Pizza_Data = [
     {
-        img:margherita,
-        title:'Margherita',
+        img: margherita,
+        title: 'Margherita',
     },
     {
-        img:masalaPaneer,
-        title:'Masala Paneer',
+        img: masalaPaneer,
+        title: 'Masala Paneer',
     },
     {
-        img:farmhouse,
-        title:'Farmhouse Magic',
+        img: farmhouse,
+        title: 'Farmhouse Magic',
     },
     {
-        img:cheeseloaded,
-        title:'Cheese Overload',
+        img: cheeseloaded,
+        title: 'Cheese Overload',
+    },
+    {
+        img: margherita,
+        title: 'Margherita',
+    },
+    {
+        img: masalaPaneer,
+        title: 'Masala Paneer',
+    },
+    {
+        img: farmhouse,
+        title: 'Farmhouse Magic',
+    },
+    {
+        img: cheeseloaded,
+        title: 'Cheese Overload',
     },
 ]

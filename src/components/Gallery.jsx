@@ -80,7 +80,7 @@ const Gallery = () => {
                     </div>
                 </div>
             </div>
-            <Button className={'flex mx-auto'}>View More </Button>
+            <Button className={'flex mx-auto bg-prime'}>View More </Button>
         </div>
     )
 }

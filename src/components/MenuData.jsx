@@ -18,21 +18,21 @@ const MenuData = () => {
         </Input>
         <SubHeading className={'mt-[36px] !text-[32px]'} text={'Menu'} />
         <div className='flex mt-[10px] gap-[14px]'>
-          <Button className={'!pt-[10px] !px-[62px]'}>Pizzas</Button>
-          <Button className={'!pt-[10px] !px-[62px]'}>Sides & Starters</Button>
-          <Button className={'!pt-[10px] !px-[62px]'}>Beverages</Button>
-          <Button className={'!pt-[10px] !px-[62px]'}>Desserts</Button>
-          <Button className={'!pt-[10px] !px-[62px]'}>Meal Combos</Button>
+          <Button className={'!pt-[10px] !px-[62px] bg-prime'}>Pizzas</Button>
+          <Button className={'!pt-[10px] !px-[62px] bg-prime'}>Sides & Starters</Button>
+          <Button className={'!pt-[10px] !px-[62px] bg-prime'}>Beverages</Button>
+          <Button className={'!pt-[10px] !px-[62px] bg-prime'}>Desserts</Button>
+          <Button className={'!pt-[10px] !px-[62px] bg-prime'}>Meal Combos</Button>
         </div>
 
         <div>
           <SubHeading className={'mt-[36px] !text-[24px]'} text={'Pizzas'} />
           <div className='flex gap-[14px] mt-5 mb-[40px]'>
-            <Button className={'flex gap-1 items-center !px-[16px] !py-[8px] whitespace-nowrap text-[20px]'}>
+            <Button className={'flex gap-1 items-center !px-[16px] !py-[8px] bg-prime whitespace-nowrap text-[20px]'}>
               <img src={veg} alt="img" className='size-[20px] ' />
               Veg
             </Button>
-            <Button className={'flex gap-1 items-center !px-[16px] !py-[8px] whitespace-nowrap text-[20px] '}>
+            <Button className={'flex gap-1 items-center !px-[16px] bg-prime !py-[8px] whitespace-nowrap text-[20px] '}>
               <img src={nonveg} alt="img" className='size-[20px]' />
               Non Veg
             </Button>
@@ -56,7 +56,7 @@ const MenuData = () => {
             </div>
           ))}
         </div>
-       <div className='flex justify-center'><Button className={'mt-[32px]'}>Show More</Button></div>
+       <div className='flex justify-center'><Button className={'mt-[32px] bg-prime'}>Show More</Button></div>
       </div>
     </div>
   )
