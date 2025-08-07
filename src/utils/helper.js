@@ -388,6 +388,8 @@ export const Famous_Data = [
         description: 'Pizza Paradise',
         price: '₹ 249',
         rating: '4.0',
+        category: 'Non-Vegetarian',
+
     },
     {
         img: cheeseloaded,
@@ -395,6 +397,7 @@ export const Famous_Data = [
         description: 'Desi Dhaba',
         price: '₹ 299',
         rating: '4.5',
+        category: 'Vegetarian',
     },
     {
         img: veggieFiesta,
@@ -402,6 +405,7 @@ export const Famous_Data = [
         description: "La Pino'z Pizza",
         price: '₹ 269',
         rating: '4.2',
+        category: 'Vegetarian',
     },
     {
         img: masalaPaneer,
@@ -409,6 +413,7 @@ export const Famous_Data = [
         description: 'Pizza Wings',
         price: '₹ 299',
         rating: '4.4',
+        category: 'Vegetarian',
     },
     {
         img: farmhouse,
@@ -416,6 +421,7 @@ export const Famous_Data = [
         description: 'Oven Story',
         price: '₹ 279',
         rating: '4.0',
+        category: 'Non-Vegetarian',
     },
     {
         img: peppyPanner,
@@ -423,6 +429,7 @@ export const Famous_Data = [
         description: 'Pizza Wings',
         price: '₹ 289',
         rating: '4.5',
+        category: 'Non-Vegetarian',
     },
     {
         img: periPeri,
@@ -430,6 +437,7 @@ export const Famous_Data = [
         description: 'Oven Story',
         price: '₹ 299',
         rating: '4.2',
+        category: 'Non-Vegetarian',
     },
     {
         img: cheessecorn,
@@ -437,6 +445,7 @@ export const Famous_Data = [
         description: 'Domino’s Pizza',
         price: '₹ 259',
         rating: '4.4',
+        category: 'Vegetarian',
     },
 ]
 

@@ -18,11 +18,11 @@ const MenuData = () => {
         </Input>
         <SubHeading className={'mt-[36px] !text-[32px]'} text={'Menu'} />
         <div className='flex mt-[10px] gap-[14px]'>
-          <Button className={'!pt-[10px] !px-[62px] bg-prime'}>Pizzas</Button>
-          <Button className={'!pt-[10px] !px-[62px] bg-prime'}>Sides & Starters</Button>
-          <Button className={'!pt-[10px] !px-[62px] bg-prime'}>Beverages</Button>
-          <Button className={'!pt-[10px] !px-[62px] bg-prime'}>Desserts</Button>
-          <Button className={'!pt-[10px] !px-[62px] bg-prime'}>Meal Combos</Button>
+          <Button className={'!py-[8px] !px-[62px] border border-[#C1C1C1]  text-[14px] !text-[#C1C1C1] !rounded-[12px] '}>Pizzas</Button>
+          <Button className={'!py-[8px] !px-[62px] border border-[#C1C1C1]  text-[14px] !text-[#C1C1C1] !rounded-[12px]  '}>Sides & Starters</Button>
+          <Button className={'!py-[8px] !px-[62px] border border-[#C1C1C1]  text-[14px] !text-[#C1C1C1] !rounded-[12px]  '}>Beverages</Button>
+          <Button className={'!py-[8px] !px-[62px]  border border-[#C1C1C1]  text-[14px] !text-[#C1C1C1] !rounded-[12px] '}>Desserts</Button>
+          <Button className={'!py-[8px] !px-[62px]  border border-[#C1C1C1]  text-[14px] !text-[#C1C1C1] !rounded-[12px] flex items-center'}>Meal Combos</Button>
         </div>
 
         <div>

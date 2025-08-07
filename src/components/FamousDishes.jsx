@@ -3,21 +3,27 @@ import SubHeading from './common/SubHeading'
 import Button from './common/Button'
 import { Famous_Data } from '../utils/helper'
 import Description from './common/Description'
-import { Star } from '../utils/icon'
+import { Filter, Star } from '../utils/icon'
+
 
 const FamousDishes = () => {
+
   return (
     <div className='bg-[#F9FAFB]'>
       <div className='max-w-[1164px] mx-auto px-3 py-[100px] '>
         <div className='max-w-[1140px]'>
           <SubHeading className={'mb-[32px] '} text={'Famous Dishes in Hisar'} />
           <div className='flex gap-[14px]'>
-            <Button className={'!py-[10p] !px-[16px] whitespace-nowrap w-[170px] bg-prime'}>All</Button>
-            <Button className={'!py-[10p]  !px-[16px] whitespace-nowrap w-[170px] bg-prime'}>Vegetarian</Button>
-            <Button className={'!py-[10p] !px-[16px] whitespace-nowrap w-[170px] bg-prime'}>Non-Vegetarian</Button>
-            <Button className={'!py-[10p] !px-[16px] whitespace-nowrap w-[170px] bg-prime'}>Top Rated</Button>
-            <Button className={'!py-[10p] !px-[16px] whitespace-nowrap w-[170px] bg-prime'}>Price : Low to High</Button>
-            <Button className={'!py-[10p] !px-[16px] whitespace-nowrap w-[170px] bg-prime'}>Price : High to Low</Button>
+            <Button className='flex items-center gap-[3px] !py-[8px] !px-[14px] max-w-fit whitespace-nowrap w-[170px] border border-[#C1C1C1]  text-[14px] !text-[#C1C1C1] !rounded-[12px] '>
+             <Filter/>
+                Filter
+            </Button>
+            <Button className={'!py-[8px] !px-[14px] max-w-fit whitespace-nowrap w-[170px] border border-[#C1C1C1]  text-[14px] !text-[#C1C1C1] !rounded-[12px] '}>All</Button>
+            <Button className={'!py-[8px]  !px-[14px] max-w-fit whitespace-nowrap w-[170px] border border-[#C1C1C1]  text-[14px] !text-[#C1C1C1] !rounded-[12px] '}>Vegetarian</Button>
+            <Button className={'!py-[8px] !px-[14px] max-w-fit whitespace-nowrap w-[170px] border border-[#C1C1C1]  text-[14px] !text-[#C1C1C1] !rounded-[12px]'}>Non-Vegetarian</Button>
+            <Button className={'!py-[8px] !px-[14px] max-w-fit whitespace-nowrap w-[170px] border border-[#C1C1C1]  text-[14px] !text-[#C1C1C1] !rounded-[12px]'}>Top Rated</Button>
+            {/* <Button className='!py-[8px] !px-[14px] max-w-fit whitespace-nowrap w-[170px] border border-[#C1C1C1]  text-[14px] !text-[#C1C1C1] !rounded-[12px]'>Price : Low to High</Button>
+            <Button className='!py-[8px] !px-[14px] max-w-fit whitespace-nowrap w-[170px] border border-[#C1C1C1]  text-[14px] !text-[#C1C1C1] !rounded-[12px]'>Price : High to Low</Button> */}
           </div>
           <div className='grid grid-cols-4 gap-x-[24px] gap-y-[40px] mt-[40px]'>
             {Famous_Data.map((item, index) => (
