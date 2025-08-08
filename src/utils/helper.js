@@ -33,6 +33,13 @@ import Restaurantimg1 from '../assets/webp/restaurantimg1.webp'
 import Restaurantimg2 from '../assets/webp/restaurantimg2.webp'
 import Restaurantimg3 from '../assets/webp/restaurantimg3.webp'
 import Restaurantimg4 from '../assets/webp/restaurantimg4.webp'
+import profile1 from '../assets/png/profile1.png'
+import profile2 from '../assets/png/profile2.png'
+import profile3 from '../assets/png/profile3.png'
+import profile4 from '../assets/png/profile4.png'
+import profile5 from '../assets/png/profile5.png'
+import profile6 from '../assets/png/profile6.png'
+import profile7 from '../assets/png/profile7.png'
 
 
 
@@ -596,4 +603,74 @@ export const Restaurant = [
         description: 'Sweets, North Indian',
         rating: '4.4',
     },
+]
+
+export const OurClient_Data = [
+    {
+        // img: profile1,
+        name: 'Reet Malik',
+        role: 'Software Engineer',
+        description: '“Veggie Fiesta hit all the right spots – fresh toppings, generous cheese, and just the right amount of spice. Even my kids loved it!”',
+    },
+    {
+        // img: profile2,
+        name: 'Ankita Bansal ',
+        role: 'UI/UX Designer',
+        description: '“Veggie Fiesta hit all the right spots – fresh toppings, generous cheese, and just the right amount of spice. Even my kids loved it!”',
+    },
+    {
+        // img: profile3,
+        name: 'Ragini Malhotra ',
+        role: 'Head Chef',
+        description: '“Veggie Fiesta hit all the right spots – fresh toppings, generous cheese, and just the right amount of spice. Even my kids loved it!”',
+    },
+    {
+        // img: profile4,
+        name: 'Ritesh Malik',
+        role: 'Customer Support Lead',
+        description: '“Veggie Fiesta hit all the right spots – fresh toppings, generous cheese, and just the right amount of spice. Even my kids loved it!”',
+    },
+    {
+        // img: profile5,
+        name: 'Amit Rathi',
+        role: 'Delivery Ops Manager',
+        description: '“Veggie Fiesta hit all the right spots – fresh toppings, generous cheese, and just the right amount of spice. Even my kids loved it!”',
+    },
+    {
+        // img: profile6,
+        name: 'Raj Kapoor',
+        role: 'Front End Developer',
+        description: '“Veggie Fiesta hit all the right spots – fresh toppings, generous cheese, and just the right amount of spice. Even my kids loved it!”',
+    },
+    {
+        // img: profile7,
+        name: 'Karina Verma',
+        role: 'Back End Developer',
+        description: '“Veggie Fiesta hit all the right spots – fresh toppings, generous cheese, and just the right amount of spice. Even my kids loved it!”',
+    },
+]
+
+export const Profile = [
+    {
+        img: profile1,
+    },
+    {
+        img: profile2,
+    },
+    {
+        img: profile3,
+    },
+    {
+        img: profile4,
+    },
+    {
+        img: profile5,
+    },
+    {
+        img: profile6,
+    },
+    {
+        img: profile7,
+    },
+    
 ]

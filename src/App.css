@@ -78,3 +78,54 @@ body {
         @apply left-0
     }
 }
+
+/* ✅ Non-active images */
+.mySwiper .swiper-slide img {
+    border: 4px solid #F9EDE2;
+
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    opacity: 1;
+
+}
+
+/* ✅ Active thumbnail image */
+.mySwiper .swiper-slide-thumb-active img {
+    border: 4px solid #FBCEA8;
+    transform: scale(1.4);
+    opacity: 1;
+
+}
+
+/* 
+.swiper-slide.swiper-slide-visible.swiper-slide-fully-visible.swiper-slide-active {
+    scale: 1.3;
+} */
+
+
+.swiper-slide.swiper-slide-active+div {
+    transform: translateY(-18px);
+}
+
+.swiper-slide.swiper-slide-active+div+div {
+    transform: translateY(-33px);
+}
+
+.swiper-slide.swiper-slide-active+div+div+div {
+    transform: translateY(-62px);
+}
+
+/* Select the previous 1st slide */
+.mySwiper:has(.swiper-slide:nth-child(4).swiper-slide-active) .swiper-slide:nth-child(3) {
+    transform: translateY(-18px);
+}
+
+/* Previous 2nd slide */
+.mySwiper:has(.swiper-slide:nth-child(4).swiper-slide-active) .swiper-slide:nth-child(2) {
+    transform: translateY(-33px);
+}
+
+/* Previous 3rd slide */
+.mySwiper:has(.swiper-slide:nth-child(4).swiper-slide-active) .swiper-slide:nth-child(1) {
+    transform: translateY(-62px);
+}
