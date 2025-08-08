@@ -102,30 +102,29 @@ body {
     scale: 1.3;
 } */
 
-
-.swiper-slide.swiper-slide-active+div {
+/* active previous profile */
+/* When 4th is active, move 3rd, 2nd, 1st back */
+.mySwiper:has(.swiper-wrapper > .swiper-slide:nth-child(4).swiper-slide-active) .swiper-wrapper>.swiper-slide:nth-child(3) .client-slide {
     transform: translateY(-18px);
 }
 
-.swiper-slide.swiper-slide-active+div+div {
+.mySwiper:has(.swiper-wrapper > .swiper-slide:nth-child(4).swiper-slide-active) .swiper-wrapper>.swiper-slide:nth-child(2) .client-slide {
     transform: translateY(-33px);
 }
 
-.swiper-slide.swiper-slide-active+div+div+div {
+.mySwiper:has(.swiper-wrapper > .swiper-slide:nth-child(4).swiper-slide-active) .swiper-wrapper>.swiper-slide:nth-child(1) .client-slide {
     transform: translateY(-62px);
 }
 
-/* Select the previous 1st slide */
-.mySwiper:has(.swiper-slide:nth-child(4).swiper-slide-active) .swiper-slide:nth-child(3) {
+/* active next proile */
+.mySwiper .swiper-wrapper>.swiper-slide.swiper-slide-active+.swiper-slide .client-slide {
     transform: translateY(-18px);
 }
 
-/* Previous 2nd slide */
-.mySwiper:has(.swiper-slide:nth-child(4).swiper-slide-active) .swiper-slide:nth-child(2) {
+.mySwiper .swiper-wrapper>.swiper-slide.swiper-slide-active+.swiper-slide+.swiper-slide .client-slide {
     transform: translateY(-33px);
 }
 
-/* Previous 3rd slide */
-.mySwiper:has(.swiper-slide:nth-child(4).swiper-slide-active) .swiper-slide:nth-child(1) {
+.mySwiper .swiper-wrapper>.swiper-slide.swiper-slide-active+.swiper-slide+.swiper-slide+.swiper-slide .client-slide {
     transform: translateY(-62px);
 }

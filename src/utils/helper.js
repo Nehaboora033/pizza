@@ -607,43 +607,36 @@ export const Restaurant = [
 
 export const OurClient_Data = [
     {
-        // img: profile1,
         name: 'Reet Malik',
         role: 'Software Engineer',
         description: '“Veggie Fiesta hit all the right spots – fresh toppings, generous cheese, and just the right amount of spice. Even my kids loved it!”',
     },
     {
-        // img: profile2,
         name: 'Ankita Bansal ',
         role: 'UI/UX Designer',
         description: '“Veggie Fiesta hit all the right spots – fresh toppings, generous cheese, and just the right amount of spice. Even my kids loved it!”',
     },
     {
-        // img: profile3,
         name: 'Ragini Malhotra ',
         role: 'Head Chef',
         description: '“Veggie Fiesta hit all the right spots – fresh toppings, generous cheese, and just the right amount of spice. Even my kids loved it!”',
     },
     {
-        // img: profile4,
         name: 'Ritesh Malik',
         role: 'Customer Support Lead',
         description: '“Veggie Fiesta hit all the right spots – fresh toppings, generous cheese, and just the right amount of spice. Even my kids loved it!”',
     },
     {
-        // img: profile5,
         name: 'Amit Rathi',
         role: 'Delivery Ops Manager',
         description: '“Veggie Fiesta hit all the right spots – fresh toppings, generous cheese, and just the right amount of spice. Even my kids loved it!”',
     },
     {
-        // img: profile6,
         name: 'Raj Kapoor',
         role: 'Front End Developer',
         description: '“Veggie Fiesta hit all the right spots – fresh toppings, generous cheese, and just the right amount of spice. Even my kids loved it!”',
     },
     {
-        // img: profile7,
         name: 'Karina Verma',
         role: 'Back End Developer',
         description: '“Veggie Fiesta hit all the right spots – fresh toppings, generous cheese, and just the right amount of spice. Even my kids loved it!”',

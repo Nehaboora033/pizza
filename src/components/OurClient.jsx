@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import SubHeading from './common/SubHeading'
 import Description from './common/Description'
 import { OurClient_Data, Profile } from '../utils/helper'
@@ -18,6 +18,7 @@ import { FreeMode, Navigation, Thumbs } from 'swiper/modules'
 const OurClient = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [activeIndex, setActiveIndex] = useState(3);
+  const swiperRef = useRef(null);
   return (
     <div className='bg-center bg-cover bg-no-repeat' style={{ backgroundImage: `url(${backgroundImage})` }}>
       <div className='max-w-[1164px] mx-auto px-3 py-[100px]'>
@@ -49,11 +50,13 @@ const OurClient = () => {
         >
           {Profile.map((item, index) => (
             <SwiperSlide key={index}>
-              <img
-                src={item.img}
-                alt={`profile-${index}`}
-                className={' transition-all duration-300 mx-auto '}
-              />
+              <div className='client-slide'>
+                <img
+                  src={item.img}
+                  alt="profile"
+                  className={' transition-all duration-300 mx-auto '}
+                />
+              </div>
 
             </SwiperSlide>
           ))}
