@@ -21,7 +21,7 @@ const BackToTop = () => {
             <button
                 onClick={handleBackToTop}
                 aria-label="Back to top"
-                className="!fixed flex justify-center items-center rotate-[-90deg] bottom-8 pizza-cheese right-8 size-[50px] text-xl z-[9] bg-prime text-white rounded-full shadow-lg cursor-pointer transition-all duration-300 ease-linear">
+                className="!fixed flex justify-center items-center rotate-[-90deg] bottom-8 pizza-cheese right-8 size-[50px] text-xl z-[9] bg-prime text-white rounded-full shadow-lg cursor-pointer transition-all hover:scale-110 duration-300 ease-linear">
             <LearnArrow/>
             </button>
         </div>
