@@ -422,9 +422,11 @@ export const Filter = ({ className }) => (
 
 )
 
-export const LearnArrow = () => (
-    <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1.33464 6L14.668 6M14.668 6L9.66797 1M14.668 6L9.66797 11" stroke="#20527A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+export const LearnArrow = ({ className }) => (
+    <svg
+        className={className}
+        width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.33464 6L14.668 6M14.668 6L9.66797 1M14.668 6L9.66797 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
 
 )
@@ -434,4 +436,8 @@ export const ClientArrow = () => (
         <path d="M1 7L17 7M17 7L11 1M17 7L11 13" stroke="#010101" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
 
+)
+
+export const UpArrow = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" class="lucide lucide-chevrons-up-icon lucide-chevrons-up"><path d="m17 11-5-5-5 5" /><path d="m17 18-5-5-5 5" /></svg>
 )

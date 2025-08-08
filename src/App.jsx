@@ -3,7 +3,7 @@ import './App.css'
 import Header from './components/common/Header'
 import { Outlet, useLocation } from 'react-router-dom'
 import Footer from './components/common/Footer'
-import Craving from './components/common/Craving'
+import BackToTop from './components/common/BackToTop'
 
 function App() {
   const location = useLocation();
@@ -18,6 +18,7 @@ function App() {
         <Outlet />
       </div>
       <Footer customBg={isSpecialFooter} />
+      <BackToTop/>
     </>
 
   )
