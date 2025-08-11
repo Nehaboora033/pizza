@@ -1,6 +1,5 @@
 import React from 'react'
 import Input from './common/Input'
-import { SearchIcon } from '../utils/icon'
 import SubHeading from './common/SubHeading'
 import Button from './common/Button'
 import veg from '../assets/png/veg.png'
@@ -8,13 +7,14 @@ import nonveg from '../assets/png/non-veg.png'
 import { menupizza } from '../utils/helper'
 import Description from './common/Description'
 import rating from '../assets/svg/dominosrating.svg'
+import { IconSearch } from '../utils/icon'
 
 const MenuData = () => {
   return (
     <div className='max-w-[1164px] mx-auto px-3 mt-[40px] mb-[100px]'>
       <div className='max-w-[1140px]'>
         <Input className={'pl-[40px] border-none bg-[#FAFAFA]'} placeholder={'Search for dishes...'}>
-          <SearchIcon />
+        <IconSearch/>
         </Input>
         <SubHeading className={'mt-[36px] !text-[32px]'} text={'Menu'} />
         <div className='flex mt-[10px] gap-[14px]'>

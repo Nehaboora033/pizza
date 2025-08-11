@@ -1,4 +1,4 @@
-import { Chef, Email, Facebook, Instagram, Linkedin, Order, Pizza, Quality, support, Track, Visit } from "./icon"
+import { Chef, Email, Facebook, Instagram, Large, Linkedin, Medium, Order, Pizza, Quality, Regular, support, Track, Visit } from "./icon"
 import galleryImg1 from "../assets/webp/galleryimg1.webp";
 import galleryImg2 from "../assets/webp/galleryimg2.webp";
 import galleryImg3 from "../assets/webp/galleryimg3.webp";
@@ -51,10 +51,6 @@ export const NavLinks = [
     {
         name: 'Menu',
         link: 'menu',
-    },
-    {
-        name: 'Customize Pizza',
-        link: 'customize',
     },
     {
         name: 'Offers',
@@ -665,5 +661,53 @@ export const Profile = [
     {
         img: profile7,
     },
-    
+
 ]
+
+export const categories = [
+    {
+        label: 'All',
+        value: 'All'
+    },
+    {
+        label: 'Vegetarian',
+        value: 'Vegetarian'
+    },
+    {
+        label: 'Non-Vegetarian',
+        value: 'Non-Vegetarian'
+    },
+    {
+
+        label: 'Top Rated',
+        value: 'Top Rated'
+    },
+    {
+        label: 'Price : Low to High',
+        value: 'Low'
+    },
+    {
+        label: 'Price : High to Low',
+        value: 'High'
+    },
+]
+
+export const Select_Size_pizza=[
+    {
+        img:Regular,
+        size:'Regular',
+        serve:'Serve 1',
+    },
+    {
+        img:Medium,
+        size:'Medium',
+        serve:'Serve 2',
+
+    },
+    {
+        img:Large,
+        size:'Large',
+        serve:'Serve 4',
+    },
+]
+

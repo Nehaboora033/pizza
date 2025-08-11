@@ -1,4 +1,4 @@
-import React, { Children } from 'react'
+import React from 'react'
 
 const Input = ({ name, type = "text", placeholder, value, onChange, className, label, error,children }) => {
     return (

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SubHeading from './common/SubHeading'
 import Button from './common/Button'
 import { Famous_Data } from '../utils/helper'
@@ -7,7 +7,6 @@ import { Filter, Star } from '../utils/icon'
 
 
 const FamousDishes = () => {
-
   return (
     <div className='bg-[#F9FAFB]'>
       <div className='max-w-[1164px] mx-auto px-3 py-[100px] '>
@@ -15,8 +14,8 @@ const FamousDishes = () => {
           <SubHeading className={'mb-[32px] '} text={'Famous Dishes in Hisar'} />
           <div className='flex gap-[14px]'>
             <Button className='flex items-center gap-[3px] !py-[8px] !px-[14px] max-w-fit whitespace-nowrap w-[170px] border border-[#C1C1C1]  text-[14px] !text-[#C1C1C1] !rounded-[12px] '>
-             <Filter/>
-                Filter
+              <Filter />
+              Filter
             </Button>
             <Button className={'!py-[8px] !px-[14px] max-w-fit whitespace-nowrap w-[170px] border border-[#C1C1C1]  text-[14px] !text-[#C1C1C1] !rounded-[12px] '}>All</Button>
             <Button className={'!py-[8px]  !px-[14px] max-w-fit whitespace-nowrap w-[170px] border border-[#C1C1C1]  text-[14px] !text-[#C1C1C1] !rounded-[12px] '}>Vegetarian</Button>
@@ -25,9 +24,9 @@ const FamousDishes = () => {
             <Button className='!py-[8px] !px-[14px] max-w-fit whitespace-nowrap w-[170px] border border-[#C1C1C1]  text-[14px] !text-[#C1C1C1] !rounded-[12px]'>Price : Low to High</Button>
             <Button className='!py-[8px] !px-[14px] max-w-fit whitespace-nowrap w-[170px] border border-[#C1C1C1]  text-[14px] !text-[#C1C1C1] !rounded-[12px]'>Price : High to Low</Button>
           </div>
-          <div className='grid grid-cols-4 gap-x-[24px] gap-y-[40px] mt-[40px]'>
+          <div className='grid grid-cols-4 gap-x-[24px] gap-y-[40px] mt-[40px] '>
             {Famous_Data.map((item, index) => (
-              <div key={index} className='rounded-[8px] shadow-card overflow-hidden'>
+              <div key={index} className='rounded-[8px] shadow-card overflow-hidden hover:scale-95 cursor-pointer'>
                 <img src={item.img} alt="img" />
                 <div className='p-3'>
                   <div className='flex justify-between'>
