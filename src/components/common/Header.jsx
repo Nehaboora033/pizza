@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLinks } from '../../utils/helper'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import Button from './Button'
 import { Address, Cart, Help, IconSearch, Sign_In } from '../../utils/icon'
 import Description from './Description'
 import Input from './Input'
+import SignUpModal from './SignUpModal'
 
 
 const Header = () => {
   const location = useLocation();
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <>
@@ -51,11 +53,13 @@ const Header = () => {
                 <Help />
                 <Description className={'text-[#374151]'} text={'Help'} />
               </div>
-              <div className='flex gap-[2px] items-center cursor-pointer'>
+              <div className='flex gap-[2px] items-center cursor-pointer' onClick={() => setIsModalOpen(true)}>
                 <Sign_In color={location.pathname === '/offers' ? '#374151' : '#FA8226'} />
                 <Description className={` whitespace-nowrap ${location.pathname === '/offers' ? 'text-[#374151]' : 'text-prime'}`} text={'Sign UP'} />
               </div>
               <Cart className={'cursor-pointer'} />
+              {isModalOpen && (
+                <SignUpModal onClose={() => setIsModalOpen(false)} />)}
             </div>
           </div>)}
         </div>

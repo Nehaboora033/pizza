@@ -28,7 +28,7 @@ const WhoWeAre = () => {
 
                 </div>
                 <div className='w-1/2'>
-                    <img src={img2} alt="" />
+                    <img src={img2} alt="image" />
                 </div>
             </div>
         </div>

@@ -4,6 +4,7 @@ import Header from './components/common/Header'
 import { Outlet, useLocation } from 'react-router-dom'
 import Footer from './components/common/Footer'
 import BackToTop from './components/common/BackToTop'
+import ScrollToTop from './components/common/ScrollToTop'
 
 function App() {
   const location = useLocation();
@@ -13,12 +14,13 @@ function App() {
 
   return (
     <>
+      <ScrollToTop />
       <Header />
       <div>
         <Outlet />
       </div>
       <Footer customBg={isSpecialFooter} />
-      <BackToTop/>
+      <BackToTop />
     </>
 
   )
