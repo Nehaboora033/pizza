@@ -12,6 +12,7 @@ import Terms from '../components/Terms'
 import Policy from '../components/Policy'
 
 
+
 const AppRoutes = createBrowserRouter([
   {
     path: '/',

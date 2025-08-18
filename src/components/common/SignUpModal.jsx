@@ -3,10 +3,9 @@ import SubHeading from './SubHeading'
 import { Cross, Google } from '../../utils/icon'
 import Input from './Input'
 import Description from './Description'
-import Button from './Button'
 import { Link } from 'react-router-dom'
 
-const SignUpModal = ({ onClose }) => {
+const SignUpModal = ({ onClose, onSwitchToLogin }) => {
     const [formData, setFormData] = useState({ fullName: '', email: '' })
     const [errors, setErrors] = useState({});
 
@@ -61,7 +60,7 @@ const SignUpModal = ({ onClose }) => {
             <div className='max-w-[574px] px-3 mx-auto w-full'>
                 <div className='p-[24px] rounded-[6px] max-w-[550px] w-full bg-white relative'>
                     <div className='flex items-center justify-between w-full mb-[20px]'>
-                        <SubHeading className={'!text-[32px]'} text={'Sign Up'} />
+                        <SubHeading className={'!text-[32px] roboto'} text={'Sign Up'} />
                         <button onClick={onClose} className='cursor-pointer'>
                             <Cross />
                         </button>
@@ -112,9 +111,9 @@ const SignUpModal = ({ onClose }) => {
                             />
                         </div>
 
-                        <Button type="submit" className='bg-[#CDCDCD] rounded-[12px] w-full mb-[20px] '>
+                        <button type="submit" className='bg-[#CDCDCD] py-4 text-white cursor-pointer hover:shadow-md rounded-[12px] w-full mb-[20px] '>
                             Create Account
-                        </Button>
+                        </button>
                     </form>
 
                     <div className='flex items-center mb-4'>
@@ -123,19 +122,26 @@ const SignUpModal = ({ onClose }) => {
                         <hr className='border-[#EBEBEB] flex-1' />
                     </div>
 
-                    <Button className='border border-[#E0E0E0] rounded-[6px] py-[14px] flex gap-[8px] w-full justify-center mb-[60px]'>
+                    <button className='border border-[#E0E0E0] rounded-[6px] hover:shadow-md cursor-pointer py-[14px] flex gap-[8px] w-full justify-center mb-[60px]'>
                         <Google />
                         <span className='text-black'>Sign in with Google</span>
-                    </Button>
+                    </button>
 
                     <hr className='border-[#EBEBEB] mb-[20px]' />
-                    <Description className={'text-[#838383] !text-[14px]'} text={
-                        <>
-                            Already have an account?{" "}
-                            <Link className='text-[14px] font-medium text-prime'> Login</Link>
-
-                        </>
-                    } />
+                    <Description
+                        className={'text-[#838383] !text-[14px] roboto'}
+                        text={
+                            <>
+                                Already have an account?{" "}
+                                <button
+                                    onClick={onSwitchToLogin} //  switch to login modal
+                                    className="text-[14px] roboto font-medium text-prime cursor-pointer"
+                                >
+                                    Login
+                                </button>
+                            </>
+                        }
+                    />
                 </div>
             </div>
         </div>

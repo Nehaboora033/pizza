@@ -52,9 +52,9 @@ const MenuData = () => {
               {/* All */}
               <button
                 onClick={() => setActiveTab("All")}
-                className={`flex gap-1 items-center px-[16px] py-[8px] rounded-[4px] border text-[20px] ${activeTab === "All"
-                    ? "bg-orange-500 text-white border-orange-500"
-                    : "text-black border-[#C2C2C2]"
+                className={`flex gap-1 items-center cursor-pointer px-[16px] py-[8px] rounded-[4px] border text-[20px] ${activeTab === "All"
+                  ? "bg-prime text-white "
+                  : "text-black border-[#C2C2C2]"
                   }`}
               >
                 All
@@ -63,9 +63,9 @@ const MenuData = () => {
               {/* Veg */}
               <button
                 onClick={() => setActiveTab("Veg")}
-                className={`flex gap-1 items-center px-[16px] py-[8px] rounded-[4px] border text-[20px] ${activeTab === "Veg"
-                    ? "bg-orange-500 text-white border-orange-500"
-                    : "text-black border-[#C2C2C2]"
+                className={`flex gap-1 items-center cursor-pointer px-[16px] py-[8px] rounded-[4px] border text-[20px] ${activeTab === "Veg"
+                  ? "bg-prime text-white "
+                  : "text-black border-[#C2C2C2]"
                   }`}
               >
                 <img src={veg} alt="veg" className="size-[20px]" />
@@ -75,9 +75,9 @@ const MenuData = () => {
               {/* Non-Veg */}
               <button
                 onClick={() => setActiveTab("Non-Veg")}
-                className={`flex gap-1 items-center px-[16px] py-[8px] rounded-[4px] border text-[20px] ${activeTab === "Non-Veg"
-                    ? "bg-orange-500 text-white border-orange-500"
-                    : "text-black border-[#C2C2C2]"
+                className={`flex gap-1 items-center cursor-pointer px-[16px] py-[8px] rounded-[4px] border text-[20px] ${activeTab === "Non-Veg"
+                  ? "bg-prime text-white "
+                  : "text-black border-[#C2C2C2]"
                   }`}
               >
                 <img src={nonveg} alt="non-veg" className="size-[20px]" />
