@@ -20,19 +20,20 @@ const Header = () => {
             Pizza Nest
           </Link>
           {/* ✅ Show this only on Home Page */}
-          {location.pathname === '/' && (<div className='max-w-[700px] w-full flex items-center justify-between home'>
-            <nav className='flex gap-6 items-center capitalize'>
-              {NavLinks.map((item, index) => {
-                return (
-                  <NavLink
-                    to={item.link} key={index} className={({ isActive }) => `font-noraml relative ${isActive ? 'nav-active' : 'text-[#787878] '}`}>
-                    {item.name}
-                  </NavLink>
-                )
-              })}
-            </nav>
-            <Link to={'/contact'}><Button className='bg-prime'>Contact Us</Button></Link>
-          </div>)}
+          {location.pathname === '/' && (
+            <div className='max-w-[700px] w-full flex items-center justify-between home'>
+              <nav className='flex gap-6 items-center capitalize'>
+                {NavLinks.map((item, index) => {
+                  return (
+                    <NavLink
+                      to={item.link} key={index} className={({ isActive }) => `font-noraml relative ${isActive ? 'nav-active' : 'text-[#787878] '}`}>
+                      {item.name}
+                    </NavLink>
+                  )
+                })}
+              </nav>
+              <Link to={'/contact'}><Button className='bg-prime'>Contact Us</Button></Link>
+            </div>)}
 
           {/* ✅ Show this only on Other Pages */}
           {location.pathname !== '/' && (<div className='flex items-center gap-[40px] max-w-[915px] w-full'>

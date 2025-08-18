@@ -8,7 +8,6 @@ import ScrollToTop from './components/common/ScrollToTop'
 
 function App() {
   const location = useLocation();
-
   const specialFooterPages = ['/menu', '/offers',]; //
   const isSpecialFooter = specialFooterPages.includes(location.pathname);
 

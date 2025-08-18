@@ -34,24 +34,24 @@ const AppRoutes = createBrowserRouter([
         element: <AboutUS />
       },
       {
-        path:'gallery',
-        element:<Gallery/>
+        path: 'gallery',
+        element: <Gallery />
       },
       {
-        path:'testinomial',
-        element:<Testinomals/>
+        path: 'testinomial',
+        element: <Testinomals />
       },
       {
-        path:'contact',
-        element:<ContactUs/>
+        path: 'contact',
+        element: <ContactUs />
       },
       {
-        path:'terms',
-        element:<Terms/>
+        path: 'terms',
+        element: <Terms />
       },
       {
-        path:'policy',
-        element:<Policy/>
+        path: 'policy',
+        element: <Policy />
       },
     ]
   }

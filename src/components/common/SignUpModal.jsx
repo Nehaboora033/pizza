@@ -112,7 +112,7 @@ const SignUpModal = ({ onClose }) => {
                             />
                         </div>
 
-                        <Button type="submit" className='bg-[#CDCDCD] rounded-[12px] w-full mb-[20px]'>
+                        <Button type="submit" className='bg-[#CDCDCD] rounded-[12px] w-full mb-[20px] '>
                             Create Account
                         </Button>
                     </form>
@@ -132,7 +132,7 @@ const SignUpModal = ({ onClose }) => {
                     <Description className={'text-[#838383] !text-[14px]'} text={
                         <>
                             Already have an account?{" "}
-                            <Link to={''} className='text-[14px] font-medium text-prime'>Login</Link>
+                            <Link className='text-[14px] font-medium text-prime'> Login</Link>
 
                         </>
                     } />

@@ -22,11 +22,7 @@ body {
     --color-gradient1: linear-gradient(88.78deg, #FF7C00 -0.86%, rgba(255, 124, 0, 0) 80.81%);
     --shadow-whatpizza: 0px 1px 8.6px 0px #0000001F;
 
-
 }
-
-
-
 .box-prime2 {
     background: var(--color-gradient2);
 }
