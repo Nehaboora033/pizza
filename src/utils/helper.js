@@ -337,6 +337,7 @@ export const menupizza = [
         title: 'Classic Margherita',
         description: 'Classic delight with 100% real mozzarella cheese.',
         price: '₹ 149',
+         category: "Veg",
 
     },
     {
@@ -344,42 +345,49 @@ export const menupizza = [
         title: 'Peppy Paneer',
         description: 'Flavorful paneer chunks with crisp capsicum and red paprika.',
         price: '₹ 299',
+         category: "Veg",
     },
     {
         img: farmhouse,
         title: 'Farmhouse',
         description: 'Loaded with onion, capsicum, tomato, and mushrooms.',
         price: '₹ 299',
+        category: "Non-Veg",
     },
     {
         img: cheessecorn,
         title: 'Cheese Corn',
         description: '100% real mozzarella with sweet golden corn',
         price: '₹ 179',
+         category: "Veg",
     },
     {
         img: margherita,
         title: 'Paneer Makhani',
         description: 'Desi-style paneer chunks in creamy makhani sauce with onion & capsicum',
         price: '₹ 269',
+         category: "Veg",
     },
     {
         img: peppyPanner,
         title: 'Deluxe Veggie',
         description: 'Extra loaded with onion, capsicum, mushroom, corn & paneer',
         price: '₹ 289',
+         category: "Veg",
     },
     {
         img: farmhouse,
         title: 'Tandoori Onion ',
         description: 'Tandoori-flavored onions with green capsicum and extra cheese',
         price: '₹ 299',
+        category: "Non-Veg",
     },
     {
         img: peppyPanner,
         title: 'Peri Peri Veg',
         description: 'Spicy peri peri sauce with tomato, onion, jalapeno, and mozzarella',
         price: '₹ 249',
+        category: "Non-Veg",
     },
 
 ]
@@ -664,50 +672,30 @@ export const Profile = [
 
 ]
 
-export const categories = [
+export const Select_Size_pizza = [
     {
-        label: 'All',
-        value: 'All'
+        img: Regular,
+        size: 'Regular',
+        serve: 'Serve 1',
     },
     {
-        label: 'Vegetarian',
-        value: 'Vegetarian'
-    },
-    {
-        label: 'Non-Vegetarian',
-        value: 'Non-Vegetarian'
-    },
-    {
+        img: Medium,
+        size: 'Medium',
+        serve: 'Serve 2',
 
-        label: 'Top Rated',
-        value: 'Top Rated'
     },
     {
-        label: 'Price : Low to High',
-        value: 'Low'
-    },
-    {
-        label: 'Price : High to Low',
-        value: 'High'
+        img: Large,
+        size: 'Large',
+        serve: 'Serve 4',
     },
 ]
 
-export const Select_Size_pizza=[
-    {
-        img:Regular,
-        size:'Regular',
-        serve:'Serve 1',
-    },
-    {
-        img:Medium,
-        size:'Medium',
-        serve:'Serve 2',
-
-    },
-    {
-        img:Large,
-        size:'Large',
-        serve:'Serve 4',
-    },
+export const Menu_Tabs = [
+    "Pizzas",
+    "Sides & Starters",
+    "Beverages",
+    "Desserts",
+    "Meal Combos",
 ]
 
