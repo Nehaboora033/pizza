@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Input = ({ name, type = "text", placeholder, value, onChange, className, label, error,children }) => {
+const Input = ({ name, type , placeholder, value, onChange, className, label, error,children }) => {
     return (
         <div className='w-full relative'>
             {label && (

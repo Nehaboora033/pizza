@@ -40,6 +40,10 @@ import profile4 from '../assets/png/profile4.png'
 import profile5 from '../assets/png/profile5.png'
 import profile6 from '../assets/png/profile6.png'
 import profile7 from '../assets/png/profile7.png'
+import coke from '../assets/webp/coke.webp'
+import fries from '../assets/webp/fires.webp'
+import brownie from '../assets/webp/brownie.webp'
+
 
 
 
@@ -337,7 +341,7 @@ export const menupizza = [
         title: 'Classic Margherita',
         description: 'Classic delight with 100% real mozzarella cheese.',
         price: '₹ 149',
-         category: "Veg",
+        category: "Veg",
 
     },
     {
@@ -345,7 +349,7 @@ export const menupizza = [
         title: 'Peppy Paneer',
         description: 'Flavorful paneer chunks with crisp capsicum and red paprika.',
         price: '₹ 299',
-         category: "Veg",
+        category: "Veg",
     },
     {
         img: farmhouse,
@@ -359,21 +363,21 @@ export const menupizza = [
         title: 'Cheese Corn',
         description: '100% real mozzarella with sweet golden corn',
         price: '₹ 179',
-         category: "Veg",
+        category: "Veg",
     },
     {
         img: margherita,
         title: 'Paneer Makhani',
         description: 'Desi-style paneer chunks in creamy makhani sauce with onion & capsicum',
         price: '₹ 269',
-         category: "Veg",
+        category: "Veg",
     },
     {
         img: peppyPanner,
         title: 'Deluxe Veggie',
         description: 'Extra loaded with onion, capsicum, mushroom, corn & paneer',
         price: '₹ 289',
-         category: "Veg",
+        category: "Veg",
     },
     {
         img: farmhouse,
@@ -699,3 +703,35 @@ export const Menu_Tabs = [
     "Meal Combos",
 ]
 
+export const Cart_Swiper_Data = [
+    {
+        img: coke,
+        name: 'Coca-Cola',
+        price: '₹40',
+    },
+    {
+        img: fries,
+        name: 'Crispy Fries',
+        price: '₹89',
+    },
+    {
+        img: brownie,
+        name: 'Fudge Brownie',
+        price: '₹109',
+    },
+    {
+        img: coke,
+        name: 'Coca-Cola',
+        price: '₹40',
+    },
+    {
+        img: fries,
+        name: 'Crispy Fries',
+        price: '₹89',
+    },
+    {
+        img: brownie,
+        name: 'Fudge Brownie',
+        price: '₹109',
+    },
+]

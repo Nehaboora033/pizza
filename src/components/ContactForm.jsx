@@ -50,6 +50,7 @@ const ContactForm = () => {
         <form className='space-y-5' onSubmit={handleSubmit}>
           <div className='flex gap-5'>
             <Input
+              type='text'
               placeholder='First Name'
               label='First Name'
               name='firstName'
@@ -58,6 +59,7 @@ const ContactForm = () => {
               error={formErrors.firstName}
             />
             <Input
+             type='text'
               placeholder='Last Name'
               label='Last Name'
               name='lastName'
@@ -69,6 +71,7 @@ const ContactForm = () => {
 
           <div className='flex gap-5'>
             <Input
+
               placeholder='Phone Number'
               type='tel'
               label='Phone Number'

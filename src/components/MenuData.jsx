@@ -23,7 +23,10 @@ const MenuData = () => {
   return (
     <div className='max-w-[1164px] mx-auto px-3 mt-[40px] mb-[100px]'>
       <div className='max-w-[1140px]'>
-        <Input className={'pl-[40px] border-none bg-[#FAFAFA]'} placeholder={'Search for dishes...'}>
+        <Input className={'pl-[40px] border-none bg-[#FAFAFA]'} 
+        placeholder={'Search for dishes...'}
+        type={'search'}
+        >
           <IconSearch />
         </Input>
         <SubHeading className={'mt-[36px] !text-[32px]'} text={'Menu'} />

@@ -21,8 +21,11 @@ body {
     --color-gradient2: linear-gradient(88.78deg, rgba(255, 124, 0, 0) -0.86%, #FF7C00 80.81%);
     --color-gradient1: linear-gradient(88.78deg, #FF7C00 -0.86%, rgba(255, 124, 0, 0) 80.81%);
     --shadow-whatpizza: 0px 1px 8.6px 0px #0000001F;
+    --shadow-header: 0px 2px 4px -2px #0000001A;
+    --shadow-cartswiper: 0px 2px 8.3px 0px #00000014;
 
 }
+
 .box-prime2 {
     background: var(--color-gradient2);
 }
@@ -96,6 +99,7 @@ body {
     opacity: 1;
 
 }
+
 /* active previous profile */
 /* When 4th is active, move 3rd, 2nd, 1st back */
 .mySwiper:has(.swiper-wrapper > .swiper-slide:nth-child(4).swiper-slide-active) .swiper-wrapper>.swiper-slide:nth-child(3) .client-slide {
@@ -146,4 +150,3 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: #ff4500;
 }
-

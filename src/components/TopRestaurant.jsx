@@ -23,6 +23,7 @@ const TopRestaurant = () => {
       <div className='max-w-[1140px] '>
         <div className='flex justify-between'>
           <SubHeading className={'text-[40px] mb-[40px]'} text={'Top Restaurants in Hisar'} />
+          {/* buttons */}
           <div className='flex gap-[8px]'>
             {/* Always render buttons — conditionally disable/hide */}
             <Button

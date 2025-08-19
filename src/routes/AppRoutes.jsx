@@ -10,6 +10,7 @@ import Testinomals from '../components/Testinomals'
 import ContactUs from '../pages/ContactUs'
 import Terms from '../components/Terms'
 import Policy from '../components/Policy'
+import Cart from '../pages/Cart'
 
 
 
@@ -53,6 +54,10 @@ const AppRoutes = createBrowserRouter([
       {
         path: 'policy',
         element: <Policy />
+      },
+      {
+        path: 'cart',
+        element: <Cart />
       },
     ]
   }
