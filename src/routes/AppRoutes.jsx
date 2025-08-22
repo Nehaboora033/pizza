@@ -11,6 +11,7 @@ import ContactUs from '../pages/ContactUs'
 import Terms from '../components/Terms'
 import Policy from '../components/Policy'
 import Cart from '../pages/Cart'
+import Customize from '../pages/Customize'
 
 
 
@@ -57,7 +58,11 @@ const AppRoutes = createBrowserRouter([
       },
       {
         path: 'cart',
-        element: <Cart />
+        element: <Cart />,
+      },
+      {
+        path:'cart/customize',
+        element:<Customize/>
       },
     ]
   }

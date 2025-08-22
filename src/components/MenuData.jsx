@@ -9,6 +9,8 @@ import Description from './common/Description'
 import rating from '../assets/svg/dominosrating.svg'
 import { IconSearch } from '../utils/icon'
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs'
+import { useCart } from '../context/CartContext'
+import { useNavigate } from 'react-router-dom'
 
 const MenuData = () => {
   const [activeTab, setActiveTab] = useState("All"); // default All
@@ -19,13 +21,24 @@ const MenuData = () => {
       ? menupizza
       : menupizza.filter((pizza) => pizza.category === activeTab);
 
+  const { addToCart } = useCart();
+  const navigate = useNavigate();
+
+  const handleAddToCart = () => {
+    addToCart({
+      title: "Peppy Paneer",
+      img: "pizza.png", // or your imported image
+      price: "₹299",
+      description: "Spicy paneer, capsicum, onion",
+    });
+  };
 
   return (
     <div className='max-w-[1164px] mx-auto px-3 mt-[40px] mb-[100px]'>
       <div className='max-w-[1140px]'>
-        <Input className={'pl-[40px] border-none bg-[#FAFAFA]'} 
-        placeholder={'Search for dishes...'}
-        type={'search'}
+        <Input className={'pl-[40px] border-none bg-[#FAFAFA]'}
+          placeholder={'Search for dishes...'}
+          type={'search'}
         >
           <IconSearch />
         </Input>
@@ -102,7 +115,7 @@ const MenuData = () => {
                     </div>
                     <Description className={'!text-[12px] mt-[4px] mb-[6px]'} text={item.description} />
                     <Description className={'!font-bold mb-[12px]'} text={item.price} />
-                    <Button className={'text-prime border border-[#EC6112] rounded-[11px] p-4'}>
+                    <Button onClick={() => handleAddToCart(item)} className={'text-prime border border-[#EC6112] rounded-[11px] p-4'}>
                       Add to Cart
                     </Button>
                   </div>
@@ -116,7 +129,6 @@ const MenuData = () => {
           <TabPanel className="text-5xl text-center mt-6">Desserts</TabPanel>
           <TabPanel className="text-5xl text-center mt-6">Meal Combos</TabPanel>
         </Tabs>
-
         <div className='flex justify-center'>
           <Button className={'mt-[32px] bg-prime'}>Show More</Button>
         </div>

@@ -60,7 +60,7 @@ const CartSwiper = () => {
                     <SwiperSlide key={index} >
                         <div className='rounded-[12px] shadow-cartswiper overflow-hidden w-full relative'>
                             <img src={item.img} alt="img" className='w-full' />
-                            <div className='flex justify-between w-[200px] p-3  absolute bottom-[54px] pb-[11px] left-0'>
+                            <div className='flex justify-between w-[200px] p-3  absolute bottom-[54px] pb-[11px] left-[10px]'>
                                 <p className='font-medium text-[18px] text-white'>{item.name} </p>
                                 <p className='font-medium text-[18px] text-white'>{item.price} </p>
                             </div>

@@ -43,6 +43,9 @@ import profile7 from '../assets/png/profile7.png'
 import coke from '../assets/webp/coke.webp'
 import fries from '../assets/webp/fires.webp'
 import brownie from '../assets/webp/brownie.webp'
+import onion from "../assets/webp/onion.webp"
+import redpepper from '../assets/webp/redpepper.webp'
+import mushroom from '../assets/webp/mushroom.webp'
 
 
 
@@ -342,6 +345,7 @@ export const menupizza = [
         description: 'Classic delight with 100% real mozzarella cheese.',
         price: '₹ 149',
         category: "Veg",
+        id: '1',
 
     },
     {
@@ -350,6 +354,7 @@ export const menupizza = [
         description: 'Flavorful paneer chunks with crisp capsicum and red paprika.',
         price: '₹ 299',
         category: "Veg",
+        id: '2',
     },
     {
         img: farmhouse,
@@ -357,6 +362,7 @@ export const menupizza = [
         description: 'Loaded with onion, capsicum, tomato, and mushrooms.',
         price: '₹ 299',
         category: "Non-Veg",
+        id: '3',
     },
     {
         img: cheessecorn,
@@ -364,6 +370,7 @@ export const menupizza = [
         description: '100% real mozzarella with sweet golden corn',
         price: '₹ 179',
         category: "Veg",
+        id: '4',
     },
     {
         img: margherita,
@@ -371,6 +378,7 @@ export const menupizza = [
         description: 'Desi-style paneer chunks in creamy makhani sauce with onion & capsicum',
         price: '₹ 269',
         category: "Veg",
+        id: '5',
     },
     {
         img: peppyPanner,
@@ -378,6 +386,7 @@ export const menupizza = [
         description: 'Extra loaded with onion, capsicum, mushroom, corn & paneer',
         price: '₹ 289',
         category: "Veg",
+        id: '6',
     },
     {
         img: farmhouse,
@@ -385,6 +394,7 @@ export const menupizza = [
         description: 'Tandoori-flavored onions with green capsicum and extra cheese',
         price: '₹ 299',
         category: "Non-Veg",
+        id: '7',
     },
     {
         img: peppyPanner,
@@ -392,6 +402,7 @@ export const menupizza = [
         description: 'Spicy peri peri sauce with tomato, onion, jalapeno, and mozzarella',
         price: '₹ 249',
         category: "Non-Veg",
+        id: '8',
     },
 
 ]
@@ -676,25 +687,38 @@ export const Profile = [
 
 ]
 
-export const Select_Size_pizza = [
+export const Select_Size_Pizza = [
     {
         img: Regular,
-        size: 'Regular',
+        name: 'Regular',
         serve: 'Serve 1',
     },
     {
         img: Medium,
-        size: 'Medium',
+        name: 'Medium',
         serve: 'Serve 2',
-
     },
     {
         img: Large,
-        size: 'Large',
+        name: 'Large',
         serve: 'Serve 4',
     },
 ]
 
+export const Select_Crust = [
+    {
+        name: 'New Hand Tossed',
+        price: '₹ 185',
+    },
+    {
+        name: '100%Wheat Crust',
+        price: '₹ 200',
+    },
+    {
+        name: 'Cheese Burst',
+        price: '₹ 259',
+    },
+]
 export const Menu_Tabs = [
     "Pizzas",
     "Sides & Starters",
@@ -733,5 +757,49 @@ export const Cart_Swiper_Data = [
         img: brownie,
         name: 'Fudge Brownie',
         price: '₹109',
+    },
+]
+
+export const Cart_Payment_Method = [
+    {
+        id: 'upi',
+        name: 'UPI (Google Pay, PhonePe, Paytm)',
+    },
+    {
+        id: 'card',
+        name: 'Credit / Debit Card',
+    },
+    {
+        id: 'cash',
+        name: 'Cash on Delivery',
+    },
+]
+
+export const Toppings = [
+    {
+        name: 'Grilled Mushrooms',
+        img: mushroom,
+
+    },
+    {
+        name: 'Onion',
+        img: onion,
+    },
+    {
+        name: 'Red Pepper',
+        img: redpepper,
+    },
+    {
+        name: 'Grilled Mushrooms',
+        img: mushroom,
+
+    },
+    {
+        name: 'Onion',
+        img: onion,
+    },
+    {
+        name: 'Red Pepper',
+        img: redpepper,
     },
 ]

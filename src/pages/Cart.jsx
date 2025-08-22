@@ -1,25 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
 // import img from '../assets/png/cartimagepng.jpg';
 import { Link } from 'react-router-dom';
 import Description from '../components/common/Description';
 import dominos from '../assets/png/dominoscartimg.png'
 import SubHeading from '../components/common/SubHeading';
 import rating from '../assets/svg/dominosrating.svg'
-import { ArrowCart, CartAddress, CartOffer } from '../utils/icon';
+import { ArrowCart, CartAddress, CartOffer, Check } from '../utils/icon';
 import Button from '../components/common/Button';
-import Input from '../components/common/Input';
 import CartSwiper from '../components/CartSwiper';
+import CartItems from '../components/CartItems';
+import { Cart_Payment_Method } from '../utils/helper';
+import { useCart } from '../context/CartContext';
 
 
 const Cart = () => {
-    
+
+    const [selected, setSelected] = useState("");
+    const { cartItems } = useCart();
+
+
     return (
         <div className='max-w-[1140px] px-3 mx-auto'>
             {/* <div className='flex items-center justify-center mt-5'>
                 <img src={img} alt="image" className='w-[40%] h-[40%]' />
             </div> */}
+
+
             <div className='flex justify-between mb-[40px] mt-[60px]'>
-                <Description className={' !text-[20px]'} text={'2 Items you have selected'} />
+                {cartItems.length === 0 ? (
+                    <p>Your cart is empty.</p>
+                ) : (
+                    cartItems.map((item, i) => <CartItems key={i} item={item} />)
+                )}
                 <Link className={'text-prime cursor-pointer'} to={'/menu'}>
                     Explore Menu
                 </Link>
@@ -48,7 +60,7 @@ const Cart = () => {
             {/* left part */}
             <div className='flex gap-[16px]'>
                 <div className='flex-1 max-w-[722px] w-full m-3'>
-                    hello
+                    <CartItems />
                     <CartSwiper />
                 </div>
 
@@ -94,20 +106,27 @@ const Cart = () => {
                     </div>
 
                     {/* card  payment method*/}
-                    <div className='shadow-whatpizza p-3 rounded-[6px] mb-[20px]'>
-                        <SubHeading className={'!text-[20px] mb-[18px]'} text={'Select Payment Methods'} />
-                        <div className='flex gap-[8px] mb-4'>
-                            <div><Input className={'size-[20px]'} type='checkbox' /></div>
-                            <Description text={'UPI (Google Pay, PhonePe, Paytm)'} />
-                        </div>
-                        <div className='flex gap-[8px] mb-4'>
-                            <div ><Input clasName={'size-[20px]'} type='checkbox' /></div>
-                            <Description text={'Credit / Debit Card'} />
-                        </div>
-                        <div className='flex gap-[8px] '>
-                            <div><Input className={'size-[20px]'} type='checkbox' /></div>
-                            <Description text={'Cash on Delivery'} />
-                        </div>
+                    <div className="shadow-whatpizza p-3 rounded-[6px] mb-[20px]">
+                        <SubHeading className="!text-[20px] mb-[18px]" text="Select Payment Methods" />
+
+                        {Cart_Payment_Method.map((item, index) => (
+                            <div
+                                key={index}
+                                onClick={() => setSelected(item.id)} // ✅ use item.id directly
+                                className={`flex items-center gap-[8px] mb-3 cursor-pointer p-2 rounded-[6px] transition`}
+                            >
+                                {/* Custom box */}
+                                <div
+                                    className={`w-[20px] h-[20px]  rounded-[4px] flex items-center justify-center 
+              ${selected === item.id ? 'bg-prime' : ' border border-[#E1E1E1]'}`}
+                                >
+                                    <Check />
+                                </div>
+
+                                {/* Text */}
+                                <span className="text-[16px]">{item.name}</span>
+                            </div>
+                        ))}
                     </div>
 
                     {/* card price detail */}
@@ -132,7 +151,7 @@ const Cart = () => {
                             <p className='font-bold text-[18px]'>Grand Total</p>
                             <p className='font-medium text-[18px]'>₹ 559</p>
                         </div>
-                        <Button className='bg-prime w-full'> Place Order</Button>
+                        <button className='bg-prime w-full rounded-2xl text-white py-[10px] cursor-pointer'> Place Order</button>
                     </div>
                 </div>
             </div>

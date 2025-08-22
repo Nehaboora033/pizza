@@ -10,11 +10,13 @@ function App() {
   const location = useLocation();
   const specialFooterPages = ['/menu', '/offers',]; //
   const isSpecialFooter = specialFooterPages.includes(location.pathname);
+  const noHeaderRoutes = ["/cart/customize"];
+
 
   return (
     <>
       <ScrollToTop />
-      <Header />
+      {!noHeaderRoutes.includes(location.pathname) && <Header />}
       <div>
         <Outlet />
       </div>
