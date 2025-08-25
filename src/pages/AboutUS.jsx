@@ -4,7 +4,7 @@ import AboutHero from '../components/AboutHero'
 import OurTeam from '../components/OurTeam'
 import WhyChooseUs from '../components/WhyChooseUs'
 import Craving from '../components/common/Craving'
-import Customize from './Customize'
+// import Customize from './Customize'
 // import Login from '../components/common/Login'
 
 
@@ -17,7 +17,7 @@ const AboutUS = () => {
       <OurTeam />
       <WhyChooseUs />
       <Craving />
-      <Customize />
+      {/* <Customize /> */}
       {/* <Login /> */}
 
     </div>

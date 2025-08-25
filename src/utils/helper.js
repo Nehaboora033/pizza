@@ -343,7 +343,7 @@ export const menupizza = [
         img: margherita,
         title: 'Classic Margherita',
         description: 'Classic delight with 100% real mozzarella cheese.',
-        price: '₹ 149',
+        price: '₹ 150',
         category: "Veg",
         id: '1',
 
@@ -352,7 +352,7 @@ export const menupizza = [
         img: peppyPanner,
         title: 'Peppy Paneer',
         description: 'Flavorful paneer chunks with crisp capsicum and red paprika.',
-        price: '₹ 299',
+        price: '₹ 300',
         category: "Veg",
         id: '2',
     },
@@ -360,7 +360,7 @@ export const menupizza = [
         img: farmhouse,
         title: 'Farmhouse',
         description: 'Loaded with onion, capsicum, tomato, and mushrooms.',
-        price: '₹ 299',
+        price: '₹ 300',
         category: "Non-Veg",
         id: '3',
     },
@@ -368,7 +368,7 @@ export const menupizza = [
         img: cheessecorn,
         title: 'Cheese Corn',
         description: '100% real mozzarella with sweet golden corn',
-        price: '₹ 179',
+        price: '₹ 180',
         category: "Veg",
         id: '4',
     },
@@ -376,7 +376,7 @@ export const menupizza = [
         img: margherita,
         title: 'Paneer Makhani',
         description: 'Desi-style paneer chunks in creamy makhani sauce with onion & capsicum',
-        price: '₹ 269',
+        price: '₹ 270',
         category: "Veg",
         id: '5',
     },
@@ -384,7 +384,7 @@ export const menupizza = [
         img: peppyPanner,
         title: 'Deluxe Veggie',
         description: 'Extra loaded with onion, capsicum, mushroom, corn & paneer',
-        price: '₹ 289',
+        price: '₹ 290',
         category: "Veg",
         id: '6',
     },
@@ -392,7 +392,7 @@ export const menupizza = [
         img: farmhouse,
         title: 'Tandoori Onion ',
         description: 'Tandoori-flavored onions with green capsicum and extra cheese',
-        price: '₹ 299',
+        price: '₹ 310',
         category: "Non-Veg",
         id: '7',
     },
@@ -400,7 +400,7 @@ export const menupizza = [
         img: peppyPanner,
         title: 'Peri Peri Veg',
         description: 'Spicy peri peri sauce with tomato, onion, jalapeno, and mozzarella',
-        price: '₹ 249',
+        price: '₹ 250',
         category: "Non-Veg",
         id: '8',
     },
@@ -692,16 +692,19 @@ export const Select_Size_Pizza = [
         img: Regular,
         name: 'Regular',
         serve: 'Serve 1',
+        extra: 0,   // base crust → no extra
     },
     {
         img: Medium,
         name: 'Medium',
         serve: 'Serve 2',
+        extra: 50,   // +50
     },
     {
         img: Large,
         name: 'Large',
         serve: 'Serve 4',
+        extra: 100,    // +100
     },
 ]
 
@@ -709,14 +712,17 @@ export const Select_Crust = [
     {
         name: 'New Hand Tossed',
         price: '₹ 185',
+        extra: 0,   // no extra
     },
     {
         name: '100%Wheat Crust',
         price: '₹ 200',
+        extra: 50,    // +50
     },
     {
         name: 'Cheese Burst',
         price: '₹ 259',
+        extra: 100,    // +100
     },
 ]
 export const Menu_Tabs = [

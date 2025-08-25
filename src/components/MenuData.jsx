@@ -10,31 +10,54 @@ import rating from '../assets/svg/dominosrating.svg'
 import { IconSearch } from '../utils/icon'
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs'
 import { useCart } from '../context/CartContext'
-import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const MenuData = () => {
-  const [activeTab, setActiveTab] = useState("All"); // default All
+  const [activeTab, setActiveTab] = useState("All");
+  const [showCartPopup, setShowCartPopup] = useState(false);
+  const [lastAdded, setLastAdded] = useState(null);
 
-  // Filter pizzas based on active tab
   const filteredPizzas =
-    activeTab === "All"
-      ? menupizza
-      : menupizza.filter((pizza) => pizza.category === activeTab);
+    activeTab === "All" ? menupizza : menupizza.filter((p) => p.category === activeTab);
 
-  const { addToCart } = useCart();
-  const navigate = useNavigate();
+  const { addToCart, cartItems } = useCart();
 
-  const handleAddToCart = () => {
-    addToCart({
-      title: "Peppy Paneer",
-      img: "pizza.png", // or your imported image
-      price: "₹299",
-      description: "Spicy paneer, capsicum, onion",
-    });
+  const isInCart = (title) => cartItems.some((x) => x.title === title);
+
+  const handleAddToCart = (item) => {
+    addToCart(item);
+    setLastAdded(item);
+    setShowCartPopup(true);
+    setTimeout(() => setShowCartPopup(false), 3000);
   };
 
   return (
-    <div className='max-w-[1164px] mx-auto px-3 mt-[40px] mb-[100px]'>
+    <div className='relative max-w-[1164px] mx-auto px-3 mt-[40px] mb-[100px]'>
+
+      {/* Slide-in Cart Popup */}
+      {/* <div
+        className={`fixed top-0 right-0 h-full w-[320px] bg-white shadow-lg z-50 transform transition-transform duration-500 ${showCartPopup ? "translate-x-0" : "translate-x-full"
+          }`}>
+        <div className="p-5 flex flex-col h-full">
+          <h2 className="text-xl font-bold text-prime mb-3">Item Added</h2>
+          {lastAdded && (
+            <div className="flex gap-3 items-center border-b pb-3">
+              <img src={lastAdded.img} alt="pizza" className="w-16 h-16 rounded-md" />
+              <div>
+                <p className="font-semibold">{lastAdded.title}</p>
+                <p className="text-gray-500 text-sm">{lastAdded.price}</p>
+              </div>
+            </div>
+          )}
+          <Link className="mt-auto" to="/cart">
+            <Button className="w-full bg-prime text-white py-2 rounded-md">
+              Go to Cart
+            </Button>
+          </Link>
+        </div>
+      </div> */}
+
+      {/* Main Menu */}
       <div className='max-w-[1140px]'>
         <Input className={'pl-[40px] border-none bg-[#FAFAFA]'}
           placeholder={'Search for dishes...'}
@@ -49,9 +72,7 @@ const MenuData = () => {
             {Menu_Tabs.map((item, index) => (
               <Tab
                 key={index}
-                className={
-                  "py-[10px] px-[25px] w-[170px] text-center rounded-[12px] cursor-pointer outline outline-[#C1C1C1] text-[#C1C1C1]"
-                }
+                className="py-[10px] px-[25px] w-[170px] text-center rounded-[12px] cursor-pointer outline outline-[#C1C1C1] text-[#C1C1C1]"
                 selectedClassName="bg-prime !text-white !outline-none"
               >
                 {item}
@@ -59,52 +80,35 @@ const MenuData = () => {
             ))}
           </TabList>
 
-          {/* Pizzas Tab */}
           <TabPanel>
             <SubHeading className={'mt-[36px] !text-[24px]'} text={'Pizzas'} />
 
             {/* Veg / Non-Veg Filter */}
             <div className="flex gap-[14px] mt-5 mb-[40px]">
-              {/* All */}
               <button
                 onClick={() => setActiveTab("All")}
-                className={`flex gap-1 items-center cursor-pointer px-[16px] py-[8px] rounded-[4px] border text-[20px] ${activeTab === "All"
-                  ? "bg-prime text-white "
-                  : "text-black border-[#C2C2C2]"
-                  }`}
+                className={`px-[16px] py-[8px] rounded-[4px] border text-[20px] ${activeTab === "All" ? "bg-prime text-white" : "text-black border-[#C2C2C2]"}`}
               >
                 All
               </button>
-
-              {/* Veg */}
               <button
                 onClick={() => setActiveTab("Veg")}
-                className={`flex gap-1 items-center cursor-pointer px-[16px] py-[8px] rounded-[4px] border text-[20px] ${activeTab === "Veg"
-                  ? "bg-prime text-white "
-                  : "text-black border-[#C2C2C2]"
-                  }`}
+                className={`flex gap-1 items-center px-[16px] py-[8px] rounded-[4px] border text-[20px] ${activeTab === "Veg" ? "bg-prime text-white" : "text-black border-[#C2C2C2]"}`}
               >
-                <img src={veg} alt="veg" className="size-[20px]" />
-                Veg
+                <img src={veg} alt="veg" className="size-[20px]" /> Veg
               </button>
-
-              {/* Non-Veg */}
               <button
                 onClick={() => setActiveTab("Non-Veg")}
-                className={`flex gap-1 items-center cursor-pointer px-[16px] py-[8px] rounded-[4px] border text-[20px] ${activeTab === "Non-Veg"
-                  ? "bg-prime text-white "
-                  : "text-black border-[#C2C2C2]"
-                  }`}
+                className={`flex gap-1 items-center px-[16px] py-[8px] rounded-[4px] border text-[20px] ${activeTab === "Non-Veg" ? "bg-prime text-white" : "text-black border-[#C2C2C2]"}`}
               >
-                <img src={nonveg} alt="non-veg" className="size-[20px]" />
-                Non Veg
+                <img src={nonveg} alt="non-veg" className="size-[20px]" /> Non Veg
               </button>
             </div>
 
             {/* Pizza List */}
             <div className='grid grid-cols-2 gap-6'>
               {filteredPizzas.map((item, index) => (
-                <div className='p-3 flex gap-[16px] rounded-[8px] shadow-card row' key={index}>
+                <div key={index} className='p-3 flex gap-[16px] rounded-[8px] shadow-card'>
                   <div className='w-1/2'>
                     <img src={item.img} alt="img" className='rounded-[8px]' />
                   </div>
@@ -115,20 +119,29 @@ const MenuData = () => {
                     </div>
                     <Description className={'!text-[12px] mt-[4px] mb-[6px]'} text={item.description} />
                     <Description className={'!font-bold mb-[12px]'} text={item.price} />
-                    <Button onClick={() => handleAddToCart(item)} className={'text-prime border border-[#EC6112] rounded-[11px] p-4'}>
-                      Add to Cart
-                    </Button>
+
+                    {isInCart(item.title) ? (
+                      <Link
+                        to="/cart"
+                        className="text-center text-white bg-prime border border-[#EC6112] rounded-[11px] p-4 cursor-pointer block"
+                      >
+                        Go to Cart
+                      </Link>
+                    ) : (
+                      <button
+                        onClick={() => handleAddToCart(item)}
+                        className="text-prime border border-[#EC6112] rounded-[11px] p-4 cursor-pointer"
+                      >
+                        Add to Cart
+                      </button>
+                    )}
                   </div>
                 </div>
               ))}
             </div>
           </TabPanel>
-
-          <TabPanel className="text-5xl text-center mt-6">Sides & Starters</TabPanel>
-          <TabPanel className="text-5xl text-center mt-6">Beverages</TabPanel>
-          <TabPanel className="text-5xl text-center mt-6">Desserts</TabPanel>
-          <TabPanel className="text-5xl text-center mt-6">Meal Combos</TabPanel>
         </Tabs>
+
         <div className='flex justify-center'>
           <Button className={'mt-[32px] bg-prime'}>Show More</Button>
         </div>

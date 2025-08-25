@@ -7,12 +7,14 @@ import Description from './Description'
 import Input from './Input'
 import SignUpModal from './SignUpModal'
 import Login from './Login'
+import { useCart } from '../../context/CartContext'
+
 
 const Header = () => {
   const location = useLocation();
   const [showSignUp, setShowSignUp] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
-
+  const { cartItems } = useCart();
   return (
     <>
       <div className={`${location.pathname === '/cart' ? ' shadow-header' : ''}`}>
@@ -74,8 +76,13 @@ const Header = () => {
                     <Sign_In />
                     <Description className='whitespace-nowrap text-prime' text={'Sign In'} />
                   </div>
-                  <Link to={'cart'}>
+                  <Link to={'/cart'} className="relative">
                     <Cart className={'cursor-pointer'} />
+                    {cartItems.length > 0 && (
+                      <span className="absolute -top-2 -right-2 bg-prime text-white text-[12px] rounded-full px-[6px] py-[2px]">
+                        {cartItems.length}
+                      </span>
+                    )}
                   </Link>
                 </div>
               </div>

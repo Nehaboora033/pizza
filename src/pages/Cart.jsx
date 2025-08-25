@@ -1,36 +1,42 @@
-import React, { useState } from 'react'
-// import img from '../assets/png/cartimagepng.jpg';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Description from '../components/common/Description';
-import dominos from '../assets/png/dominoscartimg.png'
+import dominos from '../assets/png/dominoscartimg.png';
 import SubHeading from '../components/common/SubHeading';
-import rating from '../assets/svg/dominosrating.svg'
+import rating from '../assets/svg/dominosrating.svg';
 import { ArrowCart, CartAddress, CartOffer, Check } from '../utils/icon';
 import Button from '../components/common/Button';
 import CartSwiper from '../components/CartSwiper';
 import CartItems from '../components/CartItems';
 import { Cart_Payment_Method } from '../utils/helper';
 import { useCart } from '../context/CartContext';
-
+import { parsePrice } from '../utils/price';
 
 const Cart = () => {
-
     const [selected, setSelected] = useState("");
     const { cartItems } = useCart();
+    const [counts, setCounts] = useState({});
 
+    // ✅ Subtotal already includes toppings (price is final from context)
+    const subtotal = cartItems.reduce((acc, item) => {
+        const price = parsePrice(item.price);
+        const qty = counts[item.title] || 1;
+        return acc + price * qty;
+    }, 0);
+
+    const taxes = 41;
+    const grandTotal = subtotal + taxes;
 
     return (
         <div className='max-w-[1140px] px-3 mx-auto'>
-            {/* <div className='flex items-center justify-center mt-5'>
-                <img src={img} alt="image" className='w-[40%] h-[40%]' />
-            </div> */}
-
-
             <div className='flex justify-between mb-[40px] mt-[60px]'>
                 {cartItems.length === 0 ? (
                     <p>Your cart is empty.</p>
                 ) : (
-                    cartItems.map((item, i) => <CartItems key={i} item={item} />)
+                    <p className="font-medium text-[18px]">
+                        {cartItems.length}{" "}
+                        {cartItems.length === 1 ? "item" : "items"} you have selected
+                    </p>
                 )}
                 <Link className={'text-prime cursor-pointer'} to={'/menu'}>
                     Explore Menu
@@ -55,15 +61,13 @@ const Cart = () => {
                     </div>
                 </div>
             </div>
-            {/* cart section */}
 
-            {/* left part */}
             <div className='flex gap-[16px]'>
+                {/* Left part */}
                 <div className='flex-1 max-w-[722px] w-full m-3'>
-                    <CartItems />
+                    <CartItems counts={counts} setCounts={setCounts} />
                     <CartSwiper />
                 </div>
-
 
                 {/* Right part */}
                 <div className='max-w-[380px] w-full m-3 '>
@@ -105,25 +109,21 @@ const Cart = () => {
                         </div>
                     </div>
 
-                    {/* card  payment method*/}
+                    {/* card payment method */}
                     <div className="shadow-whatpizza p-3 rounded-[6px] mb-[20px]">
                         <SubHeading className="!text-[20px] mb-[18px]" text="Select Payment Methods" />
-
                         {Cart_Payment_Method.map((item, index) => (
                             <div
                                 key={index}
-                                onClick={() => setSelected(item.id)} // ✅ use item.id directly
+                                onClick={() => setSelected(item.id)}
                                 className={`flex items-center gap-[8px] mb-3 cursor-pointer p-2 rounded-[6px] transition`}
                             >
-                                {/* Custom box */}
                                 <div
                                     className={`w-[20px] h-[20px]  rounded-[4px] flex items-center justify-center 
-              ${selected === item.id ? 'bg-prime' : ' border border-[#E1E1E1]'}`}
+                                        ${selected === item.id ? 'bg-prime' : ' border border-[#E1E1E1]'}`}
                                 >
                                     <Check />
                                 </div>
-
-                                {/* Text */}
                                 <span className="text-[16px]">{item.name}</span>
                             </div>
                         ))}
@@ -134,7 +134,7 @@ const Cart = () => {
                         <SubHeading className={'!text-[20px] mb-4'} text={'Price Detail'} />
                         <div className='flex items-center justify-between mb-4'>
                             <p className='font-semibold text-[18px] '>Sub Total</p>
-                            <p className='font-medium text-[18px]'>₹ 548</p>
+                            <p className='font-medium text-[18px]'>₹ {subtotal}</p>
                         </div>
                         <div className='flex items-center justify-between mb-4'>
                             <p className='font-semibold text-[18px] '>Discount</p>
@@ -142,21 +142,19 @@ const Cart = () => {
                         </div>
                         <div className='flex items-center justify-between mb-4'>
                             <p className='font-semibold text-[18px] '>Taxes and Charges</p>
-                            <p className='font-medium text-[18px]'>₹ 41</p>
+                            <p className='font-medium text-[18px]'>₹ {taxes}</p>
                         </div>
-                        <div className='bg-[#E7E7E7] h-[1px]'>
-
-                        </div>
+                        <div className='bg-[#E7E7E7] h-[1px]'></div>
                         <div className='flex items-center justify-between mt-3 mb-4'>
                             <p className='font-bold text-[18px]'>Grand Total</p>
-                            <p className='font-medium text-[18px]'>₹ 559</p>
+                            <p className='font-medium text-[18px]'>₹ {grandTotal}</p>
                         </div>
-                        <button className='bg-prime w-full rounded-2xl text-white py-[10px] cursor-pointer'> Place Order</button>
+                        <Button className='bg-prime w-full'> Place Order</Button>
                     </div>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Cart
+export default Cart;

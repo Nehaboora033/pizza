@@ -8,7 +8,7 @@ const Footer = ({ customBg }) => {
 
   return (
     <div className={customBg ? 'bg-[#F9FAFB]' : ''}>
-      <div className='1146px mx-auto px-3 pt-[80px] pb-4'>
+      <div className='max-w-[1140px] mx-auto px-3 pt-[80px] pb-4'>
         <div className='flex '>
           <div className='w-1/2'>
             <img src={Logo} alt="logo" />

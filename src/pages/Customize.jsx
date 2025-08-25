@@ -1,14 +1,16 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import backgroundImage from "../assets/webp/customizeheroimg.webp"
 import veg from '../assets/png/veg.png'
 import SubHeading from '../components/common/SubHeading'
 import Description from '../components/common/Description'
-import { Select_Crust, Select_Size_Pizza, Toppings } from '../utils/helper'
+import { Select_Crust, Select_Crust_Price, Select_Size_Pizza, Select_Size_Pizza_Price, Toppings } from '../utils/helper'
 import Button from '../components/common/Button'
 import { Add_Green, Leftcursor, Remove, Replace_Topping_Arrow, Rightcursor, Tick } from '../utils/icon'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper/modules'
-
+import { useLocation } from 'react-router-dom'
+import { useCart } from '../context/CartContext'
+import { parsePrice } from '../utils/price'
 
 
 const Customize = () => {
@@ -20,27 +22,71 @@ const Customize = () => {
     setIsBeginning(swiper.isBeginning);
     setIsEnd(swiper.isEnd);
   };
-  const [selectedSize, setSelectedSize] = useState(null);
-  const [selectedCrust, setSelectedCrust] = useState(null);
-  const [selectedTopping, setSelectedTopping] = useState(null);
+  const [selectedToppings, setSelectedToppings] = useState([]);
+  const { updateItem } = useCart();
+  const location = useLocation();
+  const pizza = location.state?.pizza;
+  const [selectedSize, setSelectedSize] = useState(0);
+  const [selectedCrust, setSelectedCrust] = useState(0);
+
+  const handleSave = () => {
+    if (!pizza) return;
+
+    const basePrice = parsePrice(pizza.price); // e.g. 150
+
+    const toppingPrice = selectedToppings.length * 30;
+    const crustExtra = Select_Crust[selectedCrust]?.extra || 0;
+    const sizeExtra = Select_Size_Pizza[selectedSize]?.extra || 0;
+
+    const finalPrice = basePrice + crustExtra + sizeExtra + toppingPrice;
+
+    updateItem(pizza.title, {
+      ...pizza,
+      size: Select_Size_Pizza[selectedSize]?.name,
+      crust: Select_Crust[selectedCrust]?.name,
+      customizations: selectedToppings,
+      price: finalPrice,
+    });
+  };
+
+  useEffect(() => {
+    if (pizza) {
+      if (pizza.customizations) setSelectedToppings(pizza.customizations);
+      if (pizza.size) {
+        const sizeIndex = Select_Size_Pizza.findIndex(s => s.name === pizza.size);
+        if (sizeIndex !== -1) setSelectedSize(sizeIndex);
+      }
+      if (pizza.crust) {
+        const crustIndex = Select_Crust.findIndex(c => c.name === pizza.crust);
+        if (crustIndex !== -1) setSelectedCrust(crustIndex);
+      }
+    }
+  }, [pizza]);
+
 
   return (
     <div>
-      <div className='bg-no-repeat bg-center bg-cover' style={{ backgroundImage: `url(${backgroundImage})` }}>
+      <div
+        className="bg-no-repeat  bg-cover"
+        style={{
+          backgroundImage: `url(${pizza?.img || backgroundImage})` // ✅ use pizza.img or fallback
+        }}
+      >
         <div className='flex gap-[8px] pt-[388px] pb-4 max-w-[1140px] w-full mx-auto px-3'>
-          <img src={veg} alt="veg" className='size-[28px] ' />
-          <p className='text-white font-semibold text-[24px]'>₹ 289</p>
+          <img src={veg} alt="veg" className='size-[28px]' />
+          <p className='text-white font-semibold text-[24px]'>₹ {pizza?.price}</p> {/* ✅ dynamic price */}
         </div>
       </div>
+
       {/* cream bg div */}
       <div className='bg-[#FFF2E6] py-5 mb-[40px]'>
         <div className='max-w-[1140px] w-full mx-auto px-3'>
-          <SubHeading className={'!text-[28px] mb-[6px]'} text={'Pappy Paneer'} />
-          <Description className={''} text={'Flavorful trio of juicy paneer, crisp capsicum with spicy red paprika'} />
+          <SubHeading className={'!text-[28px] mb-[6px]'} text={pizza?.title} />  {/* ✅ dynamic name */}
+          <Description className={''} text={pizza?.description} />                {/* ✅ dynamic description */}
         </div>
       </div>
-      <div className='max-w-[1140px] px-3 mx-auto'>
 
+      <div className='max-w-[1140px] px-3 mx-auto'>
         {/* select size */}
         <div className='max-w-[1140px] mb-[40px]'>
           <SubHeading className={'!text-[24px] mb-4'} text={'Select Size'} />
@@ -48,11 +94,18 @@ const Customize = () => {
             {Select_Size_Pizza.map((item, index) => {
               const isSelected = selectedSize === index;
               return (
-                <div onClick={() => setSelectedSize(isSelected?null:index)} className={` py-4 px-5 rounded-[12px] flex gap-4 items-center max-w-[205px] w-full cursor-pointer transition-all  ${isSelected ? 'border border-[#F77C22] bg-[#FEF7F2] text-prime' : ' border border-[#C1C1C1] '}`} key={index}>
+                <div
+                  onClick={() => setSelectedSize(isSelected ? null : index)}
+                  className={`py-4 px-5 rounded-[12px] flex gap-4 items-center max-w-[205px] w-full cursor-pointer transition-all 
+    ${isSelected ? 'border border-[#F77C22] bg-[#FEF7F2]' : 'border border-[#C1C1C1]'}`}
+                  key={index}
+                >
                   <item.img className={`${isSelected ? 'text-[#F26F1B]' : 'text-[#4D4D4D]'}`} />
                   <div>
-                    <p className='font-medium text-[20px]'>{item.name} </p>
-                    <p className='font-regular text-[16px] text-[#4D4D4D]'>{item.serve} </p>
+                    <p className={`font-medium text-[20px] ${isSelected ? 'text-prime' : 'text-[#4D4D4D]'}`}>
+                      {item.name}
+                    </p>
+                    <p className={`font-regular text-[16px] ${isSelected ? 'text-prime' : 'text-[#4D4D4D]'}`}>{item.serve}</p>
                   </div>
                 </div>
               )
@@ -78,6 +131,7 @@ const Customize = () => {
             }
             )}
           </div>
+
         </div>
 
         {/* add toppings */}
@@ -118,26 +172,26 @@ const Customize = () => {
             onSlideChange={handleSlideChange}
           >
             {Toppings.map((item, index) => {
-              const isSelected = selectedTopping === index;
+              const isSelected = selectedToppings.includes(item.name);
               return (
-                <SwiperSlide key={index}>
-                  <p className='font-medium !text-[24px] mb-3'>{item.name}</p>
-                  <div
-                    onClick={() =>
-                      setSelectedTopping(isSelected ? null : index) // toggle select
+                <SwiperSlide
+                  key={index}
+                  onClick={() => {
+                    if (isSelected) {
+                      setSelectedToppings(selectedToppings.filter(t => t !== item.name));
+                    } else {
+                      setSelectedToppings([...selectedToppings, item.name]);
                     }
-                    className="shadow-choose rounded-[12px] overflow-hidden cursor-pointer relative"
-                  >
-                    <img src={item.img} alt="img" className='object-coveer w-full' />
-                    <div className="py-[8px] flex gap-[11px] justify-center items-center cursor-pointer transition-colors duration-300">
-                      {/* Swap icon based on state */}
+                  }}
+                >
+                  <p className="font-medium !text-[24px] mb-3">{item.name}</p>
+                  <div className="shadow-choose rounded-[12px] overflow-hidden cursor-pointer relative">
+                    <img src={item.img} alt="img" className="object-cover w-full" />
+                    <div className="py-[8px] flex gap-[11px] justify-center items-center cursor-pointer">
                       {isSelected ? <Remove /> : <Add_Green />}
-
-                      {/* Swap text based on state */}
                       <p className={isSelected ? "text-[#363636]" : "text-[#13A100]"}>
                         {isSelected ? "Remove" : "Add"}
                       </p>
-                      {/* selected green box */}
                       {isSelected && (
                         <div className="size-[24px] bg-[#13A100] rounded-[2.5px] flex items-center justify-center absolute top-0 right-0 m-2">
                           <Tick />
@@ -145,13 +199,26 @@ const Customize = () => {
                       )}
                     </div>
                   </div>
-
                 </SwiperSlide>
               )
             }
             )}
           </Swiper>
         </div>
+
+        <p className="text-xl font-bold text-prime mb-4">
+          Total: ₹{" "}
+          {parsePrice(pizza.price) +
+            (Select_Crust[selectedCrust]?.extra || 0) +
+            (Select_Size_Pizza[selectedSize]?.extra || 0) +
+            selectedToppings.length * 30}
+        </p>
+        <button
+          onClick={handleSave}
+          className="bg-prime text-white px-6 py-2 rounded-md mb-4 cursor-pointer "
+        >
+          Save to Cart
+        </button>
         {/* replace toppings */}
         <div className='p-4 border border-[#C2C2C2] rounded-[12px] flex justify-between items-center mb-[60px]'>
           <div className=''>
