@@ -692,19 +692,16 @@ export const Select_Size_Pizza = [
         img: Regular,
         name: 'Regular',
         serve: 'Serve 1',
-        extra: 0,   // base crust → no extra
     },
     {
         img: Medium,
         name: 'Medium',
         serve: 'Serve 2',
-        extra: 50,   // +50
     },
     {
         img: Large,
         name: 'Large',
         serve: 'Serve 4',
-        extra: 100,    // +100
     },
 ]
 
@@ -712,17 +709,14 @@ export const Select_Crust = [
     {
         name: 'New Hand Tossed',
         price: '₹ 185',
-        extra: 0,   // no extra
     },
     {
         name: '100%Wheat Crust',
         price: '₹ 200',
-        extra: 50,    // +50
     },
     {
         name: 'Cheese Burst',
         price: '₹ 259',
-        extra: 100,    // +100
     },
 ]
 export const Menu_Tabs = [
@@ -809,3 +803,16 @@ export const Toppings = [
         img: redpepper,
     },
 ]
+
+
+export const Select_Crust_Price = [
+    { name: 'New Hand Tossed', extra: 0 },   // base crust → no extra
+    { name: '100% Wheat Crust', extra: 50 }, // wheat → +50
+    { name: 'Cheese Burst', extra: 100 },    // cheese → +100
+];
+
+export const Select_Size_Pizza_Price = [
+    { name: 'Regular', serve: 'Serves 1', extra: 0 },   // base size
+    { name: 'Medium', serve: 'Serves 2', extra: 50 },   // +50
+    { name: 'Large', serve: 'Serves 4', extra: 100 },   // +100
+];

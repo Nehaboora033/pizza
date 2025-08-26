@@ -8,23 +8,33 @@ import ScrollToTop from './components/common/ScrollToTop'
 
 function App() {
   const location = useLocation();
-  const specialFooterPages = ['/menu', '/offers',]; //
-  const isSpecialFooter = specialFooterPages.includes(location.pathname);
-  const noHeaderRoutes = ["/cart/customize"];
 
+  // Pages where footer has a special background
+  const specialFooterPages = ['/menu', '/offers'];
+  const isSpecialFooter = specialFooterPages.includes(location.pathname);
+
+  // Pages where header/footer should be hidden
+  const noHeaderFooterRoutes = ["/cart/customize"];
+  const shouldHideHeaderFooter = noHeaderFooterRoutes.includes(location.pathname);
 
   return (
     <>
       <ScrollToTop />
-      {!noHeaderRoutes.includes(location.pathname) && <Header />}
+
+      {/* Header (hidden on certain routes) */}
+      {!shouldHideHeaderFooter && <Header />}
+
       <div>
         <Outlet />
       </div>
-      <Footer customBg={isSpecialFooter} />
+
+      {/* Footer (hidden on certain routes) */}
+      {!shouldHideHeaderFooter && <Footer customBg={isSpecialFooter} />}
+
+      {/* ✅ Always show BackToTop */}
       <BackToTop />
     </>
-
-  )
+  );
 }
 
-export default App
+export default App;

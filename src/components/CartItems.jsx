@@ -33,22 +33,12 @@ const CartItems = ({ counts, setCounts }) => {
         <div className='flex flex-col gap-4'>
             {cartItems.map((item, index) => (
                 <div key={index} className='max-w-[722px] p-3 rounded-[8px] shadow-testinomials'>
-                    <div className='flex gap-[12px] relative'>
-                        <div className="relative">
+                    <div className='flex gap-[12px] '>
                             <img
                                 src={item.img}
                                 alt={item.title}
-                                className="w-[180px] h-[130px] rounded-[4px]"
+                                className="w-[150px] h-[130px] rounded-[4px]"
                             />
-
-                            <Link
-                                to={'/cart/customize'}
-                                state={{ pizza: item }}
-                                className="size-[18px] absolute right-0 bottom-[56px] m-1 bg-white rounded-[2px] flex items-center justify-center"
-                            >
-                                <Customize_Icon />
-                            </Link>
-                        </div>
                         <div className=' w-full'>
                             <div className='flex justify-between'>
                                 <SubHeading className={'!text-[24px] mb-[4px]'} text={item.title} />
@@ -98,10 +88,17 @@ const CartItems = ({ counts, setCounts }) => {
                             </div>
 
                             {/* customise part */}
-                            <div className='flex items-center mb-[13px]'>
+                            <div className='flex items-center mb-[13px] relative'>
                                 <Description className={'!font-medium mr-[11px]'} text={item.size || 'Regular'} />
                                 <div className='w-[2px] bg-black h-[17px]'></div>
                                 <Description className={'!font-medium ml-[11px]'} text={item.crust || 'New Hand Tossed'} />
+                                <Link
+                                    to={'/cart/customize'}
+                                    state={{ pizza: item }}
+                                    className="size-[18px] absolute bottom-[-18px] left-[-38px]  m-1 bg-white rounded-[2px] flex items-center justify-center"
+                                >
+                                    <Customize_Icon />
+                                </Link>
                             </div>
 
                             {item.customizations && item.customizations.length > 0 && (

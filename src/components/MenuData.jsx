@@ -140,8 +140,19 @@ const MenuData = () => {
               ))}
             </div>
           </TabPanel>
+          <TabPanel>
+            <div className="m-5 font-semibold text-3xl text-center pt-3">Sides & Starters</div>
+          </TabPanel>
+          <TabPanel>
+            <div className="m-5 font-semibold text-3xl text-center pt-3">Beverages</div>
+          </TabPanel>
+          <TabPanel>
+            <div className="m-5 font-semibold text-3xl text-center pt-3">Desserts</div>
+          </TabPanel>
+          <TabPanel>
+            <div className="m-5 font-semibold text-3xl text-center pt-3">Meal Combos</div>
+          </TabPanel>
         </Tabs>
-
         <div className='flex justify-center'>
           <Button className={'mt-[32px] bg-prime'}>Show More</Button>
         </div>
