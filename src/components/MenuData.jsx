@@ -34,29 +34,6 @@ const MenuData = () => {
   return (
     <div className='relative max-w-[1164px] mx-auto px-3 mt-[40px] mb-[100px]'>
 
-      {/* Slide-in Cart Popup */}
-      {/* <div
-        className={`fixed top-0 right-0 h-full w-[320px] bg-white shadow-lg z-50 transform transition-transform duration-500 ${showCartPopup ? "translate-x-0" : "translate-x-full"
-          }`}>
-        <div className="p-5 flex flex-col h-full">
-          <h2 className="text-xl font-bold text-prime mb-3">Item Added</h2>
-          {lastAdded && (
-            <div className="flex gap-3 items-center border-b pb-3">
-              <img src={lastAdded.img} alt="pizza" className="w-16 h-16 rounded-md" />
-              <div>
-                <p className="font-semibold">{lastAdded.title}</p>
-                <p className="text-gray-500 text-sm">{lastAdded.price}</p>
-              </div>
-            </div>
-          )}
-          <Link className="mt-auto" to="/cart">
-            <Button className="w-full bg-prime text-white py-2 rounded-md">
-              Go to Cart
-            </Button>
-          </Link>
-        </div>
-      </div> */}
-
       {/* Main Menu */}
       <div className='max-w-[1140px]'>
         <Input className={'pl-[40px] border-none bg-[#FAFAFA]'}

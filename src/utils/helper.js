@@ -46,7 +46,12 @@ import brownie from '../assets/webp/brownie.webp'
 import onion from "../assets/webp/onion.webp"
 import redpepper from '../assets/webp/redpepper.webp'
 import mushroom from '../assets/webp/mushroom.webp'
-
+import tomato from '../assets/webp/tomato.webp'
+import olive from '../assets/webp/blackolive.webp'
+import mozzarella from '../assets/webp/Mozzarellacheesse.webp'
+import periperichiken from '../assets/webp/periperichicken.webp'
+import sausage from '../assets/webp/sausage .webp'
+import pepperoni from '../assets/webp/pepperoni.webp'
 
 
 
@@ -790,17 +795,17 @@ export const Toppings = [
         img: redpepper,
     },
     {
-        name: 'Grilled Mushrooms',
-        img: mushroom,
+        name: 'Tomato',
+        img: tomato,
 
     },
     {
-        name: 'Onion',
-        img: onion,
+        name: 'Mozzarella Cheese',
+        img: mozzarella,
     },
     {
-        name: 'Red Pepper',
-        img: redpepper,
+        name: 'Black Olive',
+        img: olive,
     },
 ]
 
@@ -816,3 +821,35 @@ export const Select_Size_Pizza_Price = [
     { name: 'Medium', serve: 'Serves 2', extra: 50 },   // +50
     { name: 'Large', serve: 'Serves 4', extra: 100 },   // +100
 ];
+
+
+export const Exchange_Data = [
+    {
+        name: 'Grilled Mushrooms',
+    },
+    {
+        name: 'Onion',
+    },
+    {
+        name: 'Red Pepper',
+    },
+    {
+        name: 'Tomato',
+    },
+]
+
+export const NonVeg_Topping = [
+    {
+        name: 'Chiken Pepperoni',
+        img:pepperoni,
+    },
+    {
+        name: 'Chiken Sausage',
+        img:sausage,
+    },
+    {
+        name: 'Peri Peri Chiken ',
+        img:periperichiken,
+
+    },
+]
