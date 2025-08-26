@@ -5,6 +5,9 @@ import { AddCount, Customize_Icon, Delete, Remove } from '../utils/icon'
 import { Link } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
 import { parsePrice } from '../utils/price'
+import veg from '../assets/png/veg.png'
+import nonveg from '../assets/png/non-veg.png'
+
 
 const CartItems = ({ counts, setCounts }) => {
     const { cartItems, removeFromCart } = useCart();
@@ -34,11 +37,11 @@ const CartItems = ({ counts, setCounts }) => {
             {cartItems.map((item, index) => (
                 <div key={index} className='max-w-[722px] p-3 rounded-[8px] shadow-testinomials'>
                     <div className='flex gap-[12px] '>
-                            <img
-                                src={item.img}
-                                alt={item.title}
-                                className="w-[150px] h-[130px] rounded-[4px]"
-                            />
+                        <img
+                            src={item.img}
+                            alt={item.title}
+                            className="w-[150px] h-[130px] rounded-[4px]"
+                        />
                         <div className=' w-full'>
                             <div className='flex justify-between'>
                                 <SubHeading className={'!text-[24px] mb-[4px]'} text={item.title} />
@@ -92,18 +95,25 @@ const CartItems = ({ counts, setCounts }) => {
                                 <Description className={'!font-medium mr-[11px]'} text={item.size || 'Regular'} />
                                 <div className='w-[2px] bg-black h-[17px]'></div>
                                 <Description className={'!font-medium ml-[11px]'} text={item.crust || 'New Hand Tossed'} />
+                                {/* customize link */}
                                 <Link
                                     to={'/cart/customize'}
                                     state={{ pizza: item }}
-                                    className="size-[18px] absolute bottom-[-18px] left-[-38px]  m-1 bg-white rounded-[2px] flex items-center justify-center"
+                                    className="size-[18px] absolute bottom-[-20px] left-[-38px]  m-1 bg-white rounded-[2px] flex items-center justify-center"
                                 >
                                     <Customize_Icon />
                                 </Link>
+                                <img
+                                    src={item.category === "Veg" ? veg : nonveg}
+                                    alt={item.category}
+                                    className='w-[16px] h-[16px] absolute top-[-83px] left-[-158px]'
+                                />
+
                             </div>
 
                             {item.customizations && item.customizations.length > 0 && (
                                 <>
-                                    <div className='border-dashed border w-[550px] mb-[11px]'></div>
+                                    <div className='border-dashed border  mb-[11px]'></div>
                                     <div>
                                         <Description
                                             className={'text-prime font-semibold cursor-pointer mb-[6px]'}

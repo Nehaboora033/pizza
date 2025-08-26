@@ -11,6 +11,8 @@ import { Navigation } from 'swiper/modules'
 import { useLocation } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
 import { parsePrice } from '../utils/price'
+import Veg from '../assets/png/veg.png'
+import nonveg from '../assets/png/non-veg.png'
 
 const Customize = () => {
   const swiperRef = useRef(null);
@@ -77,7 +79,11 @@ const Customize = () => {
         }}
       >
         <div className='flex gap-[8px] pt-[388px] pb-4 max-w-[1140px] w-full mx-auto px-3'>
-          <img src={veg} alt="veg" className='size-[28px]' />
+          <img
+            src={pizza.category === "Veg" ? Veg : nonveg}
+            alt={pizza.category}
+            className='size-[28px]'
+          />
           {/* ✅ Always show the original price (basePrice) */}
           <p className='text-white font-semibold text-[24px]'>₹ {basePrice}</p>
         </div>
