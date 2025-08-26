@@ -158,19 +158,17 @@ const Customize = () => {
 
           <Tabs>
             <TabList className={'mb-[40px] flex gap-[12px]'}>
-              <Tab
-                className={'flex gap-[4px] !rounded-[4px] !px-[16px] !py-[8px] outline text-[#2F2F2F] outline-[#C2C2C2] cursor-pointer'}
-                selectedClassName='bg-prime text-white outline-none  '
-              >
-                <img src={veg} alt="veg" className='size-[20px]' />
-                <p>Veg</p>
+              <Tab>
+                <Button className='flex gap-[4px] !rounded-[4px] !px-[16px] !py-[8px] border border-[#C2C2C2]'>
+                  <img src={veg} alt="veg" className='size-[20px]' />
+                  <p className='text-[#2F2F2F] '>Veg</p>
+                </Button>
               </Tab>
-              <Tab
-                className={'flex gap-[4px] !rounded-[4px] !px-[16px] !py-[8px] outline text-[#2F2F2F] outline-[#C2C2C2] cursor-pointer'}
-                selectedClassName='bg-prime text-white outline-none  '
-              >
-                <img src={nonveg} alt="nonveg" className='size-[20px]' />
-                <p>Non Veg</p>
+              <Tab>
+                <Button className=' flex gap-[4px] !rounded-[4px] !px-[16px] !py-[8px] border border-[#C2C2C2]'>
+                  <img src={nonveg} alt="veg" className='size-[20px]' />
+                  <p className='text-[#2F2F2F]'>Non Veg</p>
+                </Button>
               </Tab>
             </TabList>
             <TabPanel>
@@ -242,17 +240,16 @@ const Customize = () => {
                   return (
                     <div className='' key={index}>
                       <p className='font-medium text-[24px] mb-3'>{item.name}</p>
-                      <div className='shadow-testinomials rounded-[12px] overflow-hidden w-[243px] cursor-pointer'>
+                      <div className='shadow-testinomials rounded-[12px] overflow-hidden w-[243px]'>
                         <img src={item.img} alt="img" className='object-cover w-full h-[222px]' />
-                        <div className='py-[10px] flex items-center gap-[6px] justify-center'>
+                        <div className='py-[10px] flex items-center gap-[6px] justify-center cursor-pointer'>
                           <Add_Green className="" />
                           <p className='text-[#13A100]'>Add</p>
                         </div>
                       </div>
                     </div>
                   )
-                }
-                )}
+                })}
               </div>
             </TabPanel>
 
